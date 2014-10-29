@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[终有悔悟]]></title>
+  <subtitle><![CDATA[大鹏一日同风起，扶摇直上九万里 —— 李白]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-10-29T10:21:02.922Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Last Wit]]></name>
+    
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hexo部署成功后续问题]]></title>
+    <link href="http://yoursite.com/2014/10/29/2014102901/"/>
+    <id>http://yoursite.com/2014/10/29/2014102901/</id>
+    <published>2014-10-29T09:48:03.000Z</published>
+    <updated>2014-10-29T10:19:31.000Z</updated>
+    <content type="html"><![CDATA[<p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
+<h1 id="添加rss">添加RSS</h1><p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
+<ul>
+<li>安装RSS插件到本地：<code>npm install hexo-generator-feed</code></li>
+<li>开启RSS功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-feed</div></pre></td></tr></table></figure>
+
+<ul>
+<li>在站点添加链接：</li>
+</ul>
+<p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
+<p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
+<h1 id="添加sitemap">添加sitemap</h1><p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
+<ul>
+<li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
+<li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-sitemap</div></pre></td></tr></table></figure>
+
+<p>访问<code>127.0.0.1:4000/sitemap.xml</code>即可看到站点地图。不过，sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。</p>
+<h1 id="插入本地图片">插入本地图片</h1><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。
+使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
+<h1 id="bug:「warning:-lf-will-be-replaced-by-crlf」">bug:「warning: LF will be replaced by CRLF」</h1><p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
+<ul>
+<li>切换到博客的根目录，执行如下命令：<code>git config --global core.autocrlf false</code></li>
+<li>删除掉该目录下的<code>.git</code>文件夹（可能是隐藏的），命令：<code>rm -rf .git</code></li>
+<li>重新<code>git init</code>。</li>
+</ul>
+<p>再deploy试试吧，清新脱俗了。</p>
+<h1 id="bug:<code>hexo-deploy</code>没反应">bug:<code>hexo deploy</code>没反应</h1><p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
+<h1 id="bug:<code>hexo-update--g</code>升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h1><p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
+<h1 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h1><p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
+<p>打开根目录下的config文件，第15行，<code>url:</code>，自觉填上吧。</p>
+<h1 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h1><p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
+<h1 id="修改<code>_config.yml</code>">修改<code>_config.yml</code></h1><p>所以参数都需要空格然后再设置数据</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
+<h1 id="添加rss">添加RSS</h1><p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
+<ul>
+<li>安装RSS插件到本地：<code>npm install hexo-g]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo博客tags有历史残留清除方法]]></title>
+    <link href="http://yoursite.com/2014/10/26/2014102601/"/>
+    <id>http://yoursite.com/2014/10/26/2014102601/</id>
+    <published>2014-10-26T00:44:25.000Z</published>
+    <updated>2014-10-29T09:49:46.000Z</updated>
+    <content type="html"><![CDATA[<p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
+<p>这时，需要删除博客所在主目录下的db.json，然后</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="title">Hexo</span> g</div><div class="line">Hexo d</div></pre></td></tr></table></figure>
+
+<p>至此，所有残留清除干净。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
+<p>这时，需要删除博客所在主目录下的db.json，然后</p>
+<figure class="highligh]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[测试EverEdit中Markdown的模板可用性]]></title>
+    <link href="http://yoursite.com/2014/10/25/2014102501/"/>
+    <id>http://yoursite.com/2014/10/25/2014102501/</id>
+    <published>2014-10-25T05:56:54.000Z</published>
+    <updated>2014-10-25T06:00:50.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="我是用一级标题写的">我是用一级标题写的</h1><blockquote>
+<p>一万年太久，只争朝夕。——毛泽东</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span> xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=<span class="string">"utf-8"</span> /&gt;</div><div class="line">	&lt;title&gt;New Document&lt;/title&gt;</div><div class="line">	&lt;meta name=<span class="string">"generator"</span> content=<span class="string">"EverEdit"</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"author"</span> content=<span class="string">""</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"keywords"</span> content=<span class="string">""</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span> /&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	hello world</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="我是用一级标题写的">我是用一级标题写的</h1><blockquote>
+<p>一万年太久，只争朝夕。——毛泽东</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gut]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="txt" scheme="http://yoursite.com/tags/txt/"/>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Markdown初学之标题与引用]]></title>
+    <link href="http://yoursite.com/2014/10/24/20141024-4/"/>
+    <id>http://yoursite.com/2014/10/24/20141024-4/</id>
+    <published>2014-10-24T08:56:52.000Z</published>
+    <updated>2014-10-24T10:22:42.000Z</updated>
+    <content type="html"><![CDATA[<p><code>#这里是一级标题的写法</code></p>
+<h1 id="这里是一级标题">这里是一级标题</h1><p><code>###这里是三级标题的写法</code></p>
+<h3 id="这里是三级标题">这里是三级标题</h3><p><code>######这里是六级标题的写法，就到这里了，木有七级！</code></p>
+<h6 id="这里是六级标题，就到这里了，木有七级！">这里是六级标题，就到这里了，木有七级！</h6><p><code>&gt; 引用内容，多行的话，用两个空格结尾吧。这里是引用的写法</code></p>
+<blockquote>
+<p>引用内容，多行的话，用两个空格结尾吧</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>#这里是一级标题的写法</code></p>
+<h1 id="这里是一级标题">这里是一级标题</h1><p><code>###这里是三级标题的写法</code></p>
+<h3 id="这里是三级标题">这里是三级标题</h3><p><code>######这]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Markdown初学之图片与超链接]]></title>
+    <link href="http://yoursite.com/2014/10/24/20141024-3/"/>
+    <id>http://yoursite.com/2014/10/24/20141024-3/</id>
+    <published>2014-10-24T03:38:25.000Z</published>
+    <updated>2014-10-24T10:15:25.000Z</updated>
+    <content type="html"><![CDATA[<p>超链接的格式是方括号，里面是超链接名称，后面跟圆括号，里面是地址。如下</p>
+<p>超级链接：<a href="http://blog.26ji.com" target="_blank" rel="external">我的博客</a></p>
+<p>图片插入：感叹号，后面方括号，里面是候补文本，然后是圆括号，里面是图片地址</p>
+<p><img src="http://entdata-pic.stor.vipsinaapp.com/2014082717/53fda8cf2efa1p2122983127.jpg" alt="徐静蕾"></p>
+<p>另外，markdown完全兼容html，你可以用html插入这些东西。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>超链接的格式是方括号，里面是超链接名称，后面跟圆括号，里面是地址。如下</p>
+<p>超级链接：<a href="http://blog.26ji.com" target="_blank" rel="external">我的博客</a></p>
+<p>图片插入：感叹号，后面]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Markdown初学之代码]]></title>
+    <link href="http://yoursite.com/2014/10/24/20141024-2/"/>
+    <id>http://yoursite.com/2014/10/24/20141024-2/</id>
+    <published>2014-10-24T03:17:53.000Z</published>
+    <updated>2014-10-24T09:56:23.000Z</updated>
+    <content type="html"><![CDATA[<p>代码高亮显示，需要每行都空半角空格四个，另起一个段落给代码，段落代码是两个回车键。</p>
+<p>我是代码：</p>
+<pre><code>我是代码
+我是代码2
+我是第三行
+</code></pre><p>代码高亮显示，需要三个反引号,然后空格bash，然后代码，最后需要三个反引号结束。如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>代码高亮显示，需要每行都空半角空格四个，另起一个段落给代码，段落代码是两个回车键。</p>
+<p>我是代码：</p>
+<pre><code>我是代码
+我是代码2
+我是第三行
+</code></pre><p>代码高亮显示，需要三个反引号,然后空格bash，然后代码，最后需要三]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Markdown本身标准]]></title>
+    <link href="http://yoursite.com/2014/10/24/20141024-1/"/>
+    <id>http://yoursite.com/2014/10/24/20141024-1/</id>
+    <published>2014-10-24T02:17:53.000Z</published>
+    <updated>2014-10-29T08:59:14.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+</feed>
