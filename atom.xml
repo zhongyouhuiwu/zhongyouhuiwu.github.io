@@ -4,7 +4,7 @@
   <subtitle><![CDATA[大鹏一日同风起，扶摇直上九万里 —— 李白]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2014-10-29T10:44:52.196Z</updated>
+  <updated>2014-10-30T07:45:06.331Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,45 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[github绑定域名介绍]]></title>
+    <link href="http://yoursite.com/2014/10/30/zyhw01/"/>
+    <id>http://yoursite.com/2014/10/30/zyhw01/</id>
+    <published>2014-10-30T07:29:57.000Z</published>
+    <updated>2014-10-30T07:43:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="主域名绑定">主域名绑定</h2><ul>
+<li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
+</li>
+<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code>(xx根据自己情况修改)，说明cname是成功的。等待一段时间就可以直接用域名访问了。</p>
+</li>
+</ul>
+<h2 id="二级域名绑定">二级域名绑定</h2><ul>
+<li><p>设置主机记录github，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名,这个主机记录可以随便写，只要保持一致就行）</p>
+</li>
+<li><p>设置主机记录xx.github.io(xx根据自己情况修改)，类型CNAME，到github.xx.com(xx根据自己情况修改).</p>
+</li>
+<li><p>设置主机记录blog，类型CNAME，到 xx.github.io(xx根据自己情况修改).</p>
+</li>
+<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，文件中写出你要绑定的域名blog.xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code> (xx根据自己情况修改)，说明cname是成功的。通过浏览器，访问<code>http://blog.xx.com</code> (xx根据自己情况修改)，就可以打开了我们的博客站点了，而这次用的是二级域名。</p>
+</li>
+</ul>
+<p>参考： <a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a> 最终绑定成功。然而还有些没有写明的地方，走了不少弯路，特把我的实际情况写下来</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="主域名绑定">主域名绑定</h2><ul>
+<li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
+</li>
+<li><p>在你所建<code>repositories</cod]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hexo部署成功后续问题]]></title>
