@@ -8,7 +8,7 @@
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="终有悔悟">
-<meta property="og:url" content="http://yoursite.com/">
+<meta property="og:url" content="http://z.26ji.com/">
 <meta property="og:site_name" content="终有悔悟">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,112 @@
         
       >
   
-    <article id="post-bbzfgepl2q9bevfc" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-1vc5hytttscwbpzn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/10/31/zyhw02/">github新建Repositories后具体操作步骤</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-10-31T15:41:32.000Z" itemprop="datePublished">10月 31 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <h2 id="添加用户信息">添加用户信息</h2><p>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global <span class="literal">user</span>.name <span class="string">"用户名"</span></div><div class="line">git config --global <span class="literal">user</span>.email <span class="string">"你的Email"</span></div></pre></td></tr></table></figure>
+
+<h2 id="生成ssh密钥并添加到github">生成SSH密钥并添加到github</h2><p>查看是否已经有了ssh密钥：<code>cd ~/.ssh</code>。如果没有密钥则不会有此文件夹，有则备份删除。</p>
+<p><code>ssh-keygen -t rsa -C “你的注册邮箱”</code></p>
+<p>按3个回车，密码为空。最后得到了两个文件：id_rsa和id_rsa.pub，添加id_rsa.pub中的所有到github中的SSH Keys中。</p>
+<h2 id="新建工作目录，并初始化本地新仓库">新建工作目录，并初始化本地新仓库</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line"><span class="keyword">echo</span> <span class="string">"# This is my README"</span> &gt;&gt; README.md    //建立README.md文件并且内容是# This <span class="keyword">is</span> my README</div><div class="line">git <span class="built_in">add</span> .  //把所有文件加入到索引（不想把所有文件加入，可以用gitignore或<span class="built_in">add</span> 具体文件)</div><div class="line">git commit -<span class="keyword">m</span> <span class="string">"First Commit. Adding a README."</span>  //提交到本地仓库，然后会填写更新日志( -<span class="keyword">m</span> “更新日志”也可)</div></pre></td></tr></table></figure>
+
+<h2 id="添加远程仓库并推送数据到远程仓库">添加远程仓库并推送数据到远程仓库</h2><ul>
+<li>要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用，运行 <code>git remote add [shortname] [url]</code></li>
+</ul>
+<p>如下就是添加的名字是origin的仓库，一般默认的都是这个。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">git</span> remote add origin git<span class="variable">@github</span>.com:zhongyouhuiwu/ceshi.git</div></pre></td></tr></table></figure>
+
+<ul>
+<li>本地仓库中的数据推送到远程仓库。实现这个任务的命令很简单：<code>git push [remote-name] [branch-name]</code>。</li>
+</ul>
+<p>如果要把本地的 master 分支推送到 origin 服务器上（再次说明下，克隆操作会自动使用默认的 master 和 origin 名字），可以运行下面的命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">push</span> -u origin master</div></pre></td></tr></table></figure>
+
+<h2 id="之后就是重复上述操作（排除init和romote的操作）">之后就是重复上述操作（排除init和romote的操作）</h2><h2 id="其他常用命令">其他常用命令</h2><ul>
+<li>更新项目（新加了文件）：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ~/hello-world</div><div class="line">git <span class="built_in">add</span> .<span class="comment"> //这样可以自动判断新加了哪些文件，或者手动加入文件名字</span></div><div class="line">git commit<span class="comment"> //提交到本地仓库</span></div><div class="line">git push origin master<span class="comment"> //不是新创建的，不用再add 到remote上了</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li>更新项目（没新加文件，只有删除或者修改文件）：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ~/hello-world</div><div class="line">git commit -<span class="operator">a</span><span class="comment"> //记录删除或修改了哪些文件</span></div><div class="line">git push origin master<span class="comment"> //提交到github</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li>忽略一些文件，比如*.o等:</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> ~/hello-world</div><div class="line"><span class="keyword">vim</span> .gitignore //把文件类型加入到.gitignore中，保存</div><div class="line">然后就可以git <span class="built_in">add</span> . 能自动过滤这种文件</div></pre></td></tr></table></figure>
+
+<ul>
+<li>clone代码到本地：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone git<span class="annotation">@github</span>.com:zhongyouhuiwu/ceshi.git</div><div class="line">假如本地已经存在了代码，而仓库里有更新，把更改的合并到本地的项目：</div><div class="line">git fetch origin <span class="comment">//获取远程更新</span></div><div class="line">git merge origin/master <span class="comment">//把更新的内容合并到本地分支</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li>撤销</li>
+</ul>
+<p><code>git reset</code></p>
+<ul>
+<li>删除</li>
+</ul>
+<p><code>git rm *</code> // 不是用rm</p>
+<h2 id="常见错误">常见错误</h2><p>1.<code>$ git remote add origin git@github.com:zhongyouhuiwu/ceshi.git</code></p>
+<p>错误提示：<code>fatal: remote origin already exists.</code></p>
+<p>解决办法：<code>$ git remote rm origin</code></p>
+<p>然后在执行：<code>$ git remote add origin</code> <code>git@github.com:zhongyouhuiwu/ceshi.git</code> 就不会报错误了</p>
+<ol>
+<li><code>$ git push origin master</code></li>
+</ol>
+<p>错误提示：<code>error:failed to push som refs to</code></p>
+<p>解决办法：<code>$ git pull origin master</code> //先把远程服务器github上面的文件拉先来，再push 上去。</p>
+
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/10/31/zyhw02/" data-id="1vc5hytttscwbpzn" data_title="github新建Repositories后具体操作步骤"
+          data_summary="添加用户信息第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/博客/">博客</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/github/">github</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-iivwbqw69o9tpnbx" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -155,7 +260,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://yoursite.com/2014/10/30/zyhw01/" data-id="bbzfgepl2q9bevfc" data_title="github绑定域名介绍"
+          <a data-url="http://z.26ji.com/2014/10/30/zyhw01/" data-id="iivwbqw69o9tpnbx" data_title="github绑定域名介绍"
           data_summary="主域名绑定
 在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
 
@@ -179,7 +284,7 @@
 
 
   
-    <article id="post-deign8o9l03lkqqm" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-k9wecpgc58cboxzl" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -242,7 +347,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://yoursite.com/2014/10/29/2014102901/" data-id="deign8o9l03lkqqm" data_title="Hexo部署成功后续问题"
+          <a data-url="http://z.26ji.com/2014/10/29/2014102901/" data-id="k9wecpgc58cboxzl" data_title="Hexo部署成功后续问题"
           data_summary="Hexo部署中以及成功后，过程中遇到的一些问题。
 添加RSShexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：
 
@@ -267,7 +372,7 @@
 
 
   
-    <article id="post-um43j3mqex4boh91" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-5xkk31hvrtgrtlbf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -299,7 +404,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://yoursite.com/2014/10/26/2014102601/" data-id="um43j3mqex4boh91" data_title="Hexo博客tags有历史残留清除方法"
+          <a data-url="http://z.26ji.com/2014/10/26/2014102601/" data-id="5xkk31hvrtgrtlbf" data_title="Hexo博客tags有历史残留清除方法"
           data_summary="Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。
 这时，需要删除博客所在主目录下的..." class="article-share-link">Share</a>
           
@@ -321,7 +426,7 @@
 
 
   
-    <article id="post-0adb64ieo5wgwmsp" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ll5u5arkf3bc612r" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -353,7 +458,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://yoursite.com/2014/10/25/2014102501/" data-id="0adb64ieo5wgwmsp" data_title="测试EverEdit中Markdown的模板可用性"
+          <a data-url="http://z.26ji.com/2014/10/25/2014102501/" data-id="ll5u5arkf3bc612r" data_title="测试EverEdit中Markdown的模板可用性"
           data_summary="我是用一级标题写的
 一万年太久，只争朝夕。——毛泽东
 
@@ -367,64 +472,6 @@
 
           
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link label label-success" href="/tags/txt/">txt</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-naqkci7p1nfhkk3q" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/24/20141024-4/">Markdown初学之标题与引用</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-24T08:56:52.000Z" itemprop="datePublished">10月 24 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <p><code>#这里是一级标题的写法</code></p>
-<h1 id="这里是一级标题">这里是一级标题</h1><p><code>###这里是三级标题的写法</code></p>
-<h3 id="这里是三级标题">这里是三级标题</h3><p><code>######这里是六级标题的写法，就到这里了，木有七级！</code></p>
-<h6 id="这里是六级标题，就到这里了，木有七级！">这里是六级标题，就到这里了，木有七级！</h6><p><code>&gt; 引用内容，多行的话，用两个空格结尾吧。这里是引用的写法</code></p>
-<blockquote>
-<p>引用内容，多行的话，用两个空格结尾吧</p>
-</blockquote>
-
-        
-        <footer class="article-footer">
-          <a data-url="http://yoursite.com/2014/10/24/20141024-4/" data-id="naqkci7p1nfhkk3q" data_title="Markdown初学之标题与引用"
-          data_summary="#这里是一级标题的写法
-这里是一级标题###这里是三级标题的写法
-这里是三级标题######这里是六级标题的写法，就到这里了，木有七级！
-这里是六级标题，就到这里了，木有七级..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Markdown/">Markdown</a></li></ul>
 
 
         </footer>
@@ -465,7 +512,7 @@
     
       <div class="widget-wrap">
     <div id="search-form-wrap">
-      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://z.26ji.com"></form>
     </div>
 </div>
 
@@ -474,7 +521,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <a class="category-link" href="/categories/博客/">博客<span class="category-count">3</span></a><a class="category-link" href="/categories/工具/">工具<span class="category-count">1</span></a><a class="category-link" href="/categories/技术/">技术<span class="category-count">4</span></a>
+      <a class="category-link" href="/categories/博客/">博客<span class="category-count">4</span></a><a class="category-link" href="/categories/工具/">工具<span class="category-count">1</span></a><a class="category-link" href="/categories/技术/">技术<span class="category-count">4</span></a>
     </div>
   </div>
 
@@ -484,7 +531,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/Markdown/">Markdown<span class="tag-count">5</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">1</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">1</span></a>
+      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/Markdown/">Markdown<span class="tag-count">5</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">2</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">1</span></a>
     </div>
   </div>
 
@@ -494,7 +541,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
