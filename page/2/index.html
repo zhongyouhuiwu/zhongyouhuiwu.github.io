@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>终有悔悟</title>
+  <title>Zyhw&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="终有悔悟">
+<meta property="og:title" content="Zyhw'Blog">
 <meta property="og:url" content="http://z.26ji.com/page/2/">
-<meta property="og:site_name" content="终有悔悟">
+<meta property="og:site_name" content="Zyhw'Blog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="终有悔悟">
+<meta name="twitter:title" content="Zyhw'Blog">
 <meta name="twitter:description">
 
   
-    <link rel="alternative" href="/atom.xml" title="终有悔悟" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
   
   
  <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -44,7 +44,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">终有悔悟</a>
+    <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
     <div class="collapse navbar-collapse nav-menu">
       <ul class="nav navbar-nav">
       
@@ -101,7 +101,7 @@
           <div class="page-header">
             <h1 class="title">
           
-            终有悔悟 <small>大鹏一日同风起，扶摇直上九万里 —— 李白</small>
+            Zyhw'Blog <small>大鹏一日同风起，扶摇直上九万里 —— 李白</small>
           
             </h1>
         </div>
@@ -111,7 +111,217 @@
         
       >
   
-    <article id="post-ll5u5arkf3bc612r" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jh6gqwloqwouzltr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/10/30/zyhw01/">github绑定域名介绍</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-10-30T07:29:57.000Z" itemprop="datePublished">10月 30 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <h2 id="主域名绑定">主域名绑定</h2><ul>
+<li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
+</li>
+<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code>(xx根据自己情况修改)，说明cname是成功的。等待一段时间就可以直接用域名访问了。</p>
+</li>
+</ul>
+<h2 id="二级域名绑定">二级域名绑定</h2><ul>
+<li><p>设置主机记录github，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名,这个主机记录可以随便写，只要保持一致就行）</p>
+</li>
+<li><p>设置主机记录xx.github.io(xx根据自己情况修改)，类型CNAME，到github.xx.com(xx根据自己情况修改).</p>
+</li>
+<li><p>设置主机记录blog，类型CNAME，到 xx.github.io(xx根据自己情况修改).</p>
+</li>
+<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，文件中写出你要绑定的域名blog.xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code> (xx根据自己情况修改)，说明cname是成功的。通过浏览器，访问<code>http://blog.xx.com</code> (xx根据自己情况修改)，就可以打开了我们的博客站点了，而这次用的是二级域名。</p>
+</li>
+</ul>
+<p>参考： <a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a> 最终绑定成功。然而还有些没有写明的地方，走了不少弯路，特把我的实际情况写下来</p>
+
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/10/30/zyhw01/" data-id="jh6gqwloqwouzltr" data_title="github绑定域名介绍"
+          data_summary="主域名绑定
+在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
+
+在你所建repositories中，新建一个文件CNAME，无后缀，文件中..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/博客/">博客</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link label label-success" href="/tags/github/">github</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-frjxs070vx45zolg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/10/29/2014102901/">Hexo部署成功后续问题</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-10-29T09:48:03.000Z" itemprop="datePublished">10月 29 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
+<h1 id="添加rss">添加RSS</h1><p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
+<ul>
+<li>安装RSS插件到本地：<code>npm install hexo-generator-feed</code></li>
+<li>开启RSS功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-feed</div></pre></td></tr></table></figure>
+
+<ul>
+<li>在站点添加链接：</li>
+</ul>
+<p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
+<p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
+<h1 id="添加sitemap">添加sitemap</h1><p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
+<ul>
+<li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
+<li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-sitemap</div></pre></td></tr></table></figure>
+
+<p>访问<code>127.0.0.1:4000/sitemap.xml</code>即可看到站点地图。不过，sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。</p>
+<h1 id="插入本地图片">插入本地图片</h1><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。
+使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
+<h1 id="bug:「warning:-lf-will-be-replaced-by-crlf」">bug:「warning: LF will be replaced by CRLF」</h1><p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
+<ul>
+<li>切换到博客的根目录，执行如下命令：<code>git config --global core.autocrlf false</code></li>
+<li>删除掉该目录下的<code>.git</code>文件夹（可能是隐藏的），命令：<code>rm -rf .git</code></li>
+<li>重新<code>git init</code>。</li>
+</ul>
+<p>再deploy试试吧，清新脱俗了。</p>
+<h1 id="bug:<code>hexo-deploy</code>没反应">bug:<code>hexo deploy</code>没反应</h1><p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
+<h1 id="bug:<code>hexo-update--g</code>升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h1><p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
+<h1 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h1><p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
+<p>打开根目录下的config文件，第15行，<code>url:</code>，自觉填上吧。</p>
+<h1 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h1><p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
+<h1 id="修改<code>_config.yml</code>">修改<code>_config.yml</code></h1><p>所以参数都需要空格然后再设置数据</p>
+
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/10/29/2014102901/" data-id="frjxs070vx45zolg" data_title="Hexo部署成功后续问题"
+          data_summary="Hexo部署中以及成功后，过程中遇到的一些问题。
+添加RSShexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：
+
+安装RSS插件到本地：npm install hexo-generator-feed
+..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/博客/">博客</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Hexo/">Hexo</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-ecp2vrfk0ky2ciw6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/10/26/2014102601/">Hexo博客tags有历史残留清除方法</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-10-26T00:44:25.000Z" itemprop="datePublished">10月 26 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
+<p>这时，需要删除博客所在主目录下的db.json，然后</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="title">Hexo</span> g</div><div class="line">Hexo d</div></pre></td></tr></table></figure>
+
+<p>至此，所有残留清除干净。</p>
+
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/10/26/2014102601/" data-id="ecp2vrfk0ky2ciw6" data_title="Hexo博客tags有历史残留清除方法"
+          data_summary="Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。
+这时，需要删除博客所在主目录下的..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/博客/">博客</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Hexo/">Hexo</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-q94yfid4e4fwgfy0" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -143,7 +353,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/25/2014102501/" data-id="ll5u5arkf3bc612r" data_title="测试EverEdit中Markdown的模板可用性"
+          <a data-url="http://z.26ji.com/2014/10/25/2014102501/" data-id="q94yfid4e4fwgfy0" data_title="测试EverEdit中Markdown的模板可用性"
           data_summary="我是用一级标题写的
 一万年太久，只争朝夕。——毛泽东
 
@@ -167,7 +377,7 @@
 
 
   
-    <article id="post-v77r8zfo1v7n6smh" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-9emxu3uu9ln11cvd" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -201,188 +411,11 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/24/20141024-4/" data-id="v77r8zfo1v7n6smh" data_title="Markdown初学之标题与引用"
+          <a data-url="http://z.26ji.com/2014/10/24/20141024-4/" data-id="9emxu3uu9ln11cvd" data_title="Markdown初学之标题与引用"
           data_summary="#这里是一级标题的写法
 这里是一级标题###这里是三级标题的写法
 这里是三级标题######这里是六级标题的写法，就到这里了，木有七级！
 这里是六级标题，就到这里了，木有七级..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Markdown/">Markdown</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-rxrvf8ci07sbedty" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/24/20141024-3/">Markdown初学之图片与超链接</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-24T03:38:25.000Z" itemprop="datePublished">10月 24 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <p>超链接的格式是方括号，里面是超链接名称，后面跟圆括号，里面是地址。如下</p>
-<p>超级链接：<a href="http://blog.26ji.com" target="_blank" rel="external">我的博客</a></p>
-<p>图片插入：感叹号，后面方括号，里面是候补文本，然后是圆括号，里面是图片地址</p>
-<p><img src="http://entdata-pic.stor.vipsinaapp.com/2014082717/53fda8cf2efa1p2122983127.jpg" alt="徐静蕾"></p>
-<p>另外，markdown完全兼容html，你可以用html插入这些东西。</p>
-
-        
-        <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/24/20141024-3/" data-id="rxrvf8ci07sbedty" data_title="Markdown初学之图片与超链接"
-          data_summary="超链接的格式是方括号，里面是超链接名称，后面跟圆括号，里面是地址。如下
-超级链接：我的博客
-图片插入：感叹号，后面方括号，里面是候补文本，然后是圆括号，里面是图片..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Markdown/">Markdown</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-56iixiqy1r5ehkxy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/24/20141024-2/">Markdown初学之代码</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-24T03:17:53.000Z" itemprop="datePublished">10月 24 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <p>代码高亮显示，需要每行都空半角空格四个，另起一个段落给代码，段落代码是两个回车键。</p>
-<p>我是代码：</p>
-<pre><code>我是代码
-我是代码2
-我是第三行
-</code></pre><p>代码高亮显示，需要三个反引号,然后空格bash，然后代码，最后需要三个反引号结束。如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-
-
-        
-        <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/24/20141024-2/" data-id="56iixiqy1r5ehkxy" data_title="Markdown初学之代码"
-          data_summary="代码高亮显示，需要每行都空半角空格四个，另起一个段落给代码，段落代码是两个回车键。
-我是代码：
-我是代码
-我是代码2
-我是第三行
-代码高亮显示，需要三个反引号,然后空格..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Markdown/">Markdown</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-ek19hefqszpeadpk" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/24/20141024-1/">Markdown本身标准</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-24T02:17:53.000Z" itemprop="datePublished">10月 24 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/24/20141024-1/" data-id="ek19hefqszpeadpk" data_title="Markdown本身标准"
-          data_summary="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobulesho..." class="article-share-link">Share</a>
           
           
   <div class="article-category">
@@ -415,7 +448,7 @@
     </li>
     <li>
       
-        <span class="nav-next disabled">Next</span>
+        <a href="/page/3/" class="nav-next">Next</a>
       
     </li>
   </ul>
@@ -441,7 +474,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <a class="category-link" href="/categories/博客/">博客<span class="category-count">4</span></a><a class="category-link" href="/categories/工具/">工具<span class="category-count">2</span></a><a class="category-link" href="/categories/技术/">技术<span class="category-count">4</span></a>
+      <a class="category-link" href="/categories/博客/">博客<span class="category-count">4</span></a><a class="category-link" href="/categories/工具/">工具<span class="category-count">3</span></a><a class="category-link" href="/categories/技术/">技术<span class="category-count">5</span></a><a class="category-link" href="/categories/火狐/">火狐<span class="category-count">1</span></a>
     </div>
   </div>
 
@@ -451,7 +484,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/Markdown/">Markdown<span class="tag-count">5</span></a><a class="tag-link" href="/tags/autohotkey/">autohotkey<span class="tag-count">1</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">2</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">1</span></a>
+      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/Markdown/">Markdown<span class="tag-count">5</span></a><a class="tag-link" href="/tags/Photoshop/">Photoshop<span class="tag-count">1</span></a><a class="tag-link" href="/tags/autohotkey/">autohotkey<span class="tag-count">1</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">2</span></a><a class="tag-link" href="/tags/pureftpd/">pureftpd<span class="tag-count">1</span></a><a class="tag-link" href="/tags/stylish/">stylish<span class="tag-count">1</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">1</span></a>
     </div>
   </div>
 
@@ -461,7 +494,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -510,7 +543,7 @@
   
   <div class="outer container">
     <div id="footer-info" class="inner">
-      <a href="/">Last Wit</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
+      <a href="/">Zyhw</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
     </div>
   </div>
 </footer>

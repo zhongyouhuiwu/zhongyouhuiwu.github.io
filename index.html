@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>终有悔悟</title>
+  <title>Zyhw&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="终有悔悟">
+<meta property="og:title" content="Zyhw'Blog">
 <meta property="og:url" content="http://z.26ji.com/">
-<meta property="og:site_name" content="终有悔悟">
+<meta property="og:site_name" content="Zyhw'Blog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="终有悔悟">
+<meta name="twitter:title" content="Zyhw'Blog">
 <meta name="twitter:description">
 
   
-    <link rel="alternative" href="/atom.xml" title="终有悔悟" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
   
   
  <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -44,7 +44,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">终有悔悟</a>
+    <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
     <div class="collapse navbar-collapse nav-menu">
       <ul class="nav navbar-nav">
       
@@ -101,7 +101,7 @@
           <div class="page-header">
             <h1 class="title">
           
-            终有悔悟 <small>大鹏一日同风起，扶摇直上九万里 —— 李白</small>
+            Zyhw'Blog <small>大鹏一日同风起，扶摇直上九万里 —— 李白</small>
           
             </h1>
         </div>
@@ -111,7 +111,179 @@
         
       >
   
-    <article id="post-687l9slcm9pak4f0" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-n3dn8uodpwytugon" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/11/28/zyhw05/">pureftpd安装-Error</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-11-28T10:58:00.000Z" itemprop="datePublished">11月 28 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <p><code>pureftpd安装-Error: Table &#39;admin&#39; from database &#39;ftpusers&#39; doesn&#39;t exist.</code></p>
+<p>这是因为MySQL 5.1和5.5下的语句有些不同导致在MySQL 5.5下安装失败，其实Pureftpd是安装成功的，只不过php的图形界面无法登陆。</p>
+<p>MySQL 5.5 且使用了pureftpd的用户需要按如下方法修复，执行如下命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget <span class="symbol">http:</span>/<span class="regexp">/soft.vpser.net/lnmp</span><span class="regexp">/ext/fix</span>_pureftpd_mysql55.sh && chmod +x fix_pureftpd_mysql55.sh && ./fix_pureftpd_mysql55.sh</div></pre></td></tr></table></figure>
+
+<p>按提示分别输入MySQL root密码，ftp用户管理面板密码和MySQL ftp用户密码。</p>
+<p>然后在浏览器里输入： <code>http://服务器域名或ip/ftp</code>   开始设置ftp账号</p>
+
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/11/28/zyhw05/" data-id="n3dn8uodpwytugon" data_title="pureftpd安装-Error"
+          data_summary="pureftpd安装-Error: Table &#39;admin&#39; from database &#39;ftpusers&#39; doesn&#39;t exist.
+这是因为MySQL 5.1和5.5下的语句有些不同导致在MySQL 5.5下安装失败，其..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/pureftpd/">pureftpd</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-oxflo8d63431fa3y" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/11/28/zyhw04/">火狐stylish搜索样式之百度</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-11-28T10:53:00.000Z" itemprop="datePublished">11月 28 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <!---->
+          <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="at_rule">@<span class="keyword">-moz-document</span> <span class="function">regexp</span>(<span class="string">"^http://www\.baidu\.com/s.*"</span>),  </span></div><div class="line"><span class="function">regexp</span>(<span class="string">"^http://www\.baidu\.com/baidu.*"</span>),  </div><div class="line"><span class="function">regexp</span>(<span class="string">"^http://www\.baidu\.com/.*"</span>) {</div><div class="line">   </div><div class="line"><span class="comment">/* 百度搜索上方浮动条紧凑化 loge 搜索条 右上用户条 */</span></div><div class="line"><span class="id">#result_logo</span> <span class="rules">{ <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">1px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#form</span> <span class="rules">{ <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">5px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#u</span> <span class="rules">{ <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">5px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 调整上方高度以适应 searchEngineJump 脚本工具条 */</span></div><div class="line"><span class="class">.s_form</span> <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">34px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 调整百度搜索标签高度 */</span></div><div class="line"><span class="id">#s_tab</span> <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">30px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#s_tab</span> &gt; * <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">28px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 隐藏计数 */</span></div><div class="line"><span class="class">.nums</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> none <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 隐藏右边相关 */</span></div><div class="line"><span class="id">#content_right</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> none <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 让搜索内容可以排满全屏 */</span></div><div class="line"><span class="id">#container</span><span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span> <span class="important">!important</span></span></span>; <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 让出一点左边距，前面的百分比就是，嫌窄了可以自行修改，</span></div><div class="line">   但最好能让前后两个百分比加起来刚好是100%，这样既不会浪费空间，又不会把页面撑大 */</div><div class="line"><span class="id">#content_left</span> <span class="rules">{ <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">0.6%</span> <span class="important">!important</span></span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">99.4%</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 页面内容分为2列，并设置列间距为0px，</span></div><div class="line">   需要设置3列或更多列的同学请自行修改，当然相应的下面的搜索结果条目的宽度也需要相应的修改 */</div><div class="line"><span class="id">#content_left</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">-moz-column-count</span>:<span class="value"> <span class="number">2</span> <span class="important">!important</span></span></span>;</div><div class="line">    <span class="rule"><span class="attribute">-moz-column-gap</span>:<span class="value"> <span class="number">0px</span> <span class="important">!important</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+
+          
+            <p class="article-more-link">
+              <a href="/2014/11/28/zyhw04/#more">Read More</a>
+            </p>
+          
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/11/28/zyhw04/" data-id="oxflo8d63431fa3y" data_title="火狐stylish搜索样式之百度"
+          data_summary="12345678910111213141516171819202122232425262728@-moz-document regexp("^http://www\.baidu\.com/s.*"),  regexp("^http://www\.baidu\.com/baidu.*"),  regexp("^http:..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/火狐/">火狐</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/stylish/">stylish</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-6qqu1veam3va06py" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="archive-title" itemprop="name">
+      <a class="article-title" href="/2014/11/28/zyhw03/">PS无论怎么放大或设置最大字号，字体还是很小</a>
+    </h1>
+  
+
+
+        <div class="article-date">
+  <time datetime="2014-11-28T10:18:00.000Z" itemprop="datePublished">11月 28 2014</time>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <p>使用PS处理一些图片的时候，可能会碰到这样的情况，新建一个文字图层，打上文字，却发现文字字号特别小，无论怎么放大，都还是特别的小。</p>
+<ul>
+<li>如何解决呢，很简单<ul>
+<li>Alt+Ctrl+I快捷键打开“图像大小”你会发现分辨率一栏的数字异常，变成了一个很小的数字，甚至是“1”，如此小的分辨率，怪不得文字放大到最大还是很小呢。</li>
+<li>“重定图像像素”前面的勾去掉，分辨率改成默认的“72”，然后保存。</li>
+<li>新建文字图层，正常啦！</li>
+</ul>
+</li>
+</ul>
+
+        
+        <footer class="article-footer">
+          <a data-url="http://z.26ji.com/2014/11/28/zyhw03/" data-id="6qqu1veam3va06py" data_title="PS无论怎么放大或设置最大字号，字体还是很小"
+          data_summary="使用PS处理一些图片的时候，可能会碰到这样的情况，新建一个文字图层，打上文字，却发现文字字号特别小，无论怎么放大，都还是特别的小。
+
+如何解决呢，很简单
+Alt+Ctrl+I快..." class="article-share-link">Share</a>
+          
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
+
+          
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Photoshop/">Photoshop</a></li></ul>
+
+
+        </footer>
+      
+    </div>
+  </div>
+</article>
+
+
+  
+    <article id="post-ow65cpoxqtb0y9rg" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -147,7 +319,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/11/08/20141108/" data-id="687l9slcm9pak4f0" data_title="autohotkey快速输入文本内容"
+          <a data-url="http://z.26ji.com/2014/11/08/20141108/" data-id="ow65cpoxqtb0y9rg" data_title="autohotkey快速输入文本内容"
           data_summary="定义多行文本内容快速输入123456::chunsi::(《春思》【唐】李白燕草如碧丝，秦桑低绿枝。当君怀归日，是妾断肠时。春风不相识，何事入罗帏？)
 
 上述代码保存为ahk，运行。然..." class="article-share-link">Share</a>
@@ -170,7 +342,7 @@
 
 
   
-    <article id="post-1vc5hytttscwbpzn" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ow7qbt6codg4m2au" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 
@@ -254,7 +426,7 @@
 
         
         <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/31/zyhw02/" data-id="1vc5hytttscwbpzn" data_title="github新建Repositories后具体操作步骤"
+          <a data-url="http://z.26ji.com/2014/10/31/zyhw02/" data-id="ow7qbt6codg4m2au" data_title="github新建Repositories后具体操作步骤"
           data_summary="添加用户信息第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳..." class="article-share-link">Share</a>
           
           
@@ -265,216 +437,6 @@
 
           
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/github/">github</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-iivwbqw69o9tpnbx" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/30/zyhw01/">github绑定域名介绍</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-30T07:29:57.000Z" itemprop="datePublished">10月 30 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <h2 id="主域名绑定">主域名绑定</h2><ul>
-<li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
-</li>
-<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code>(xx根据自己情况修改)，说明cname是成功的。等待一段时间就可以直接用域名访问了。</p>
-</li>
-</ul>
-<h2 id="二级域名绑定">二级域名绑定</h2><ul>
-<li><p>设置主机记录github，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名,这个主机记录可以随便写，只要保持一致就行）</p>
-</li>
-<li><p>设置主机记录xx.github.io(xx根据自己情况修改)，类型CNAME，到github.xx.com(xx根据自己情况修改).</p>
-</li>
-<li><p>设置主机记录blog，类型CNAME，到 xx.github.io(xx根据自己情况修改).</p>
-</li>
-<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，文件中写出你要绑定的域名blog.xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code> (xx根据自己情况修改)，说明cname是成功的。通过浏览器，访问<code>http://blog.xx.com</code> (xx根据自己情况修改)，就可以打开了我们的博客站点了，而这次用的是二级域名。</p>
-</li>
-</ul>
-<p>参考： <a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a> 最终绑定成功。然而还有些没有写明的地方，走了不少弯路，特把我的实际情况写下来</p>
-
-        
-        <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/30/zyhw01/" data-id="iivwbqw69o9tpnbx" data_title="github绑定域名介绍"
-          data_summary="主域名绑定
-在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
-
-在你所建repositories中，新建一个文件CNAME，无后缀，文件中..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/博客/">博客</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link label label-success" href="/tags/github/">github</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-k9wecpgc58cboxzl" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/29/2014102901/">Hexo部署成功后续问题</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-29T09:48:03.000Z" itemprop="datePublished">10月 29 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
-<h1 id="添加rss">添加RSS</h1><p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
-<ul>
-<li>安装RSS插件到本地：<code>npm install hexo-generator-feed</code></li>
-<li>开启RSS功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-feed</div></pre></td></tr></table></figure>
-
-<ul>
-<li>在站点添加链接：</li>
-</ul>
-<p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
-<p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
-<h1 id="添加sitemap">添加sitemap</h1><p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
-<ul>
-<li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
-<li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-sitemap</div></pre></td></tr></table></figure>
-
-<p>访问<code>127.0.0.1:4000/sitemap.xml</code>即可看到站点地图。不过，sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。</p>
-<h1 id="插入本地图片">插入本地图片</h1><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。
-使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
-<h1 id="bug:「warning:-lf-will-be-replaced-by-crlf」">bug:「warning: LF will be replaced by CRLF」</h1><p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
-<ul>
-<li>切换到博客的根目录，执行如下命令：<code>git config --global core.autocrlf false</code></li>
-<li>删除掉该目录下的<code>.git</code>文件夹（可能是隐藏的），命令：<code>rm -rf .git</code></li>
-<li>重新<code>git init</code>。</li>
-</ul>
-<p>再deploy试试吧，清新脱俗了。</p>
-<h1 id="bug:<code>hexo-deploy</code>没反应">bug:<code>hexo deploy</code>没反应</h1><p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
-<h1 id="bug:<code>hexo-update--g</code>升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h1><p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
-<h1 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h1><p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
-<p>打开根目录下的config文件，第15行，<code>url:</code>，自觉填上吧。</p>
-<h1 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h1><p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
-<h1 id="修改<code>_config.yml</code>">修改<code>_config.yml</code></h1><p>所以参数都需要空格然后再设置数据</p>
-
-        
-        <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/29/2014102901/" data-id="k9wecpgc58cboxzl" data_title="Hexo部署成功后续问题"
-          data_summary="Hexo部署中以及成功后，过程中遇到的一些问题。
-添加RSShexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：
-
-安装RSS插件到本地：npm install hexo-generator-feed
-..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/博客/">博客</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Hexo/">Hexo</a></li></ul>
-
-
-        </footer>
-      
-    </div>
-  </div>
-</article>
-
-
-  
-    <article id="post-5xkk31hvrtgrtlbf" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
-  
-    <h1 class="archive-title" itemprop="name">
-      <a class="article-title" href="/2014/10/26/2014102601/">Hexo博客tags有历史残留清除方法</a>
-    </h1>
-  
-
-
-        <div class="article-date">
-  <time datetime="2014-10-26T00:44:25.000Z" itemprop="datePublished">10月 26 2014</time>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
-<p>这时，需要删除博客所在主目录下的db.json，然后</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="title">Hexo</span> g</div><div class="line">Hexo d</div></pre></td></tr></table></figure>
-
-<p>至此，所有残留清除干净。</p>
-
-        
-        <footer class="article-footer">
-          <a data-url="http://z.26ji.com/2014/10/26/2014102601/" data-id="5xkk31hvrtgrtlbf" data_title="Hexo博客tags有历史残留清除方法"
-          data_summary="Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。
-这时，需要删除博客所在主目录下的..." class="article-share-link">Share</a>
-          
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/博客/">博客</a>
-  </div>
-
-
-          
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link label label-primary" href="/tags/Hexo/">Hexo</a></li></ul>
 
 
         </footer>
@@ -524,7 +486,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <a class="category-link" href="/categories/博客/">博客<span class="category-count">4</span></a><a class="category-link" href="/categories/工具/">工具<span class="category-count">2</span></a><a class="category-link" href="/categories/技术/">技术<span class="category-count">4</span></a>
+      <a class="category-link" href="/categories/博客/">博客<span class="category-count">4</span></a><a class="category-link" href="/categories/工具/">工具<span class="category-count">3</span></a><a class="category-link" href="/categories/技术/">技术<span class="category-count">5</span></a><a class="category-link" href="/categories/火狐/">火狐<span class="category-count">1</span></a>
     </div>
   </div>
 
@@ -534,7 +496,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/Markdown/">Markdown<span class="tag-count">5</span></a><a class="tag-link" href="/tags/autohotkey/">autohotkey<span class="tag-count">1</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">2</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">1</span></a>
+      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/Markdown/">Markdown<span class="tag-count">5</span></a><a class="tag-link" href="/tags/Photoshop/">Photoshop<span class="tag-count">1</span></a><a class="tag-link" href="/tags/autohotkey/">autohotkey<span class="tag-count">1</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">2</span></a><a class="tag-link" href="/tags/pureftpd/">pureftpd<span class="tag-count">1</span></a><a class="tag-link" href="/tags/stylish/">stylish<span class="tag-count">1</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">1</span></a>
     </div>
   </div>
 
@@ -544,7 +506,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -593,7 +555,7 @@
   
   <div class="outer container">
     <div id="footer-info" class="inner">
-      <a href="/">Last Wit</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
+      <a href="/">Zyhw</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
     </div>
   </div>
 </footer>
