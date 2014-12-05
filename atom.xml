@@ -4,7 +4,7 @@
   <subtitle><![CDATA[大鹏一日同风起，扶摇直上九万里 —— 李白]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://z.26ji.com/"/>
-  <updated>2014-11-28T11:04:17.468Z</updated>
+  <updated>2014-12-05T08:11:32.834Z</updated>
   <id>http://z.26ji.com/</id>
   
   <author>
@@ -13,6 +13,47 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[emeditor利用书签提取小说标题]]></title>
+    <link href="http://z.26ji.com/2014/12/05/zyhw06/"/>
+    <id>http://z.26ji.com/2014/12/05/zyhw06/</id>
+    <published>2014-12-05T08:05:00.000Z</published>
+    <updated>2014-12-05T08:06:20.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2><ul>
+<li>利用正则<code>第.*[卷章]</code>查找到卷章。</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">    我是一个段落</div><div class="line">	</div><div class="line">第二章 标题</div><div class="line">	我是一个段落</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">	我是一个段落</div><div class="line">第四章 标题</div><div class="line">	我是一个段落</div><div class="line">第五章 标题</div><div class="line">	我是一个段落</div><div class="line">第六章 标题</div><div class="line">	我是一个段落</div></pre></td></tr></table></figure>
+
+<ul>
+<li><p>全部设为书签，如下图：</p>
+<p>  <img src="http://ww2.sinaimg.cn/large/005xAU1Stw1emyurpmqpnj30gj0d9tau.jpg" alt="设为书签"></p>
+</li>
+</ul>
+<h2 id="二、提取出来符合条件的字符串">二、提取出来符合条件的字符串</h2><ul>
+<li><p>文档右键-》书签-》当前文档-》提取以添加书签的行到新文件，如下图：</p>
+<p>  <img src="http://ww1.sinaimg.cn/large/005xAU1Stw1emyurq3wzhj30h409r3zu.jpg" alt="提取书签"></p>
+</li>
+<li><p>提取后的标题如下：</p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">第二章 标题</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">第四章 标题</div><div class="line">第五章 标题</div><div class="line">第六章 标题</div></pre></td></tr></table></figure>
+
+<h2 id="三、在二中可以反转书签，得到相反的内容。">三、在二中可以反转书签，得到相反的内容。</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2><ul>
+<li>利用正则<code>第.*[卷章]</code>查找到卷章。</li>
+</ul>
+<figure class="highlight"><table><tr><td cla]]>
+    </summary>
+    
+      <category term="emeditor" scheme="http://z.26ji.com/tags/emeditor/"/>
+    
+      <category term="txt" scheme="http://z.26ji.com/tags/txt/"/>
+    
+      <category term="工具" scheme="http://z.26ji.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[pureftpd安装-Error]]></title>
