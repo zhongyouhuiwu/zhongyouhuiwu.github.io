@@ -4,7 +4,7 @@
   <subtitle><![CDATA[大鹏一日同风起，扶摇直上九万里 —— 李白]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://z.26ji.com/"/>
-  <updated>2014-12-05T08:23:53.326Z</updated>
+  <updated>2014-12-06T09:26:03.955Z</updated>
   <id>http://z.26ji.com/</id>
   
   <author>
@@ -13,6 +13,92 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[EPUB内嵌入DIY字体]]></title>
+    <link href="http://z.26ji.com/2014/12/06/zyhw07/"/>
+    <id>http://z.26ji.com/2014/12/06/zyhw07/</id>
+    <published>2014-12-06T09:19:48.000Z</published>
+    <updated>2014-12-06T09:21:46.000Z</updated>
+    <content type="html"><![CDATA[<p>矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。</p>
+<h2 id="制作字体">制作字体</h2><ul>
+<li>首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。</li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02c99jnqj30fy04jwez.jpg" alt="软件"></p>
+<ul>
+<li>打开PS制作你需要的图像，最后保存成PNG。</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02c9miulj30o70fhn1p.jpg" alt="软件"></p>
+<ul>
+<li>打开Font Creator，新建工程 名字随意<a id="more"></a>
+
+</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/mw690/005xAU1Stw1en02c9zs7aj30cu0abmy6.jpg" alt="字体"></p>
+<ul>
+<li>插入字符，例如“月“字是$6708</li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cah8bwj30hi0jsacd.jpg" alt="epub内嵌字体"></p>
+<ul>
+<li>对着那个字符右键—导入图像</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02caw7vtj305205ngln.jpg" alt="epub内嵌字体"></p>
+<ul>
+<li>一般默认即可</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02cb9nz3j30f80ctt9n.jpg" alt="epub内嵌字体"></p>
+<ul>
+<li>最后对比其他字符缩放一下 调整一下位置即可。接着按上面的节奏做出所需的字符，如</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02cbq6m3j309y06wt9c.jpg" alt="epub内嵌字体"></p>
+<p><img src="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cc5fisj30ka0djwhb.jpg" alt="epub内嵌字体"></p>
+<ul>
+<li>最后保存，导出为TTF</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/mw690/005xAU1Stw1en02ccgjiej30fz0abq4m.jpg" alt="epub内嵌字体"></p>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ccs2x7j30da038glj.jpg" alt="epub内嵌字体"></p>
+<h2 id="内嵌字体到epub">内嵌字体到epub</h2><ul>
+<li>打开sigil对着资源管理器的fonts文件夹右键添加字体</li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cd8i32j3063029a9z.jpg" alt="epub内嵌字体"></p>
+<ul>
+<li>CSS这样写</li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02cdm3goj307s03sjre.jpg" alt="epub内嵌字体"></p>
+<h2 id="兼容苹果方法">兼容苹果方法</h2><ul>
+<li>新建txt，内容为</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">display_options</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">platform</span> <span class="attribute">name</span>=<span class="value">"*"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">option</span> <span class="attribute">name</span>=<span class="value">"specified-fonts"</span>&gt;</span>true<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">platform</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">display_options</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li><p>重命名为<code>com.apple.ibooks.display-options.xml</code></p>
+</li>
+<li><p>将epub重命名为zip后用winrar打开，将文件拖进去即可。</p>
+</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ce0h2yj30af03tq34.jpg" alt="epub内嵌字体"></p>
+<h2 id="效果参考">效果参考</h2><p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02ceji72j318g0zkn1t.jpg" alt="epub内嵌字体"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。</p>
+<h2 id="制作字体">制作字体</h2><ul>
+<li>首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。</li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02c99jnqj30fy04jwez.jpg" alt="软件"></p>
+<ul>
+<li>打开PS制作你需要的图像，最后保存成PNG。</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02c9miulj30o70fhn1p.jpg" alt="软件"></p>
+<ul>
+<li>打开Font Creator，新建工程 名字随意]]>
+    
+    </summary>
+    
+      <category term="EPUB" scheme="http://z.26ji.com/tags/EPUB/"/>
+    
+      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[emeditor利用书签提取小说标题]]></title>
