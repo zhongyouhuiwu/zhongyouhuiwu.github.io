@@ -4,7 +4,7 @@
   <subtitle><![CDATA[大鹏一日同风起，扶摇直上九万里 —— 李白]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://z.26ji.com/"/>
-  <updated>2014-12-06T09:26:03.955Z</updated>
+  <updated>2014-12-07T13:15:43.398Z</updated>
   <id>http://z.26ji.com/</id>
   
   <author>
@@ -13,6 +13,36 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Github push时重复输入用户名密码的问题]]></title>
+    <link href="http://z.26ji.com/2014/12/07/zyhw08/"/>
+    <id>http://z.26ji.com/2014/12/07/zyhw08/</id>
+    <published>2014-12-07T13:05:39.000Z</published>
+    <updated>2014-12-07T13:14:59.000Z</updated>
+    <content type="html"><![CDATA[<p>在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码。尽管github提供了SSH方式进行本地和服务端的链接，可是按照网站说明设置好之后，这个问题仍然存在。可以尝试下面方法：</p>
+<ul>
+<li>首先添加环境变量,变量名：HONME 变量值：%USERPROFILE%</li>
+<li>在用户文件夹如C:\Users\administrator下新建一个名为_netrc的文件。</li>
+<li>编辑该文件输入以下内容：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">machine github.<span class="keyword">com</span></div><div class="line">login id <span class="built_in">or</span> email</div><div class="line">password <span class="number">123456</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li>修改成自己的id和密码，保存。</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码。尽管github提供了SSH方式进行本地和服务端的链接，可是按照网站说明设置好之后，这个问题仍然存在。可以尝试下面方法：</p>
+<ul>
+<li>首先添加环境变量,变量名：]]>
+    </summary>
+    
+      <category term="github" scheme="http://z.26ji.com/tags/github/"/>
+    
+      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[EPUB内嵌入DIY字体]]></title>
