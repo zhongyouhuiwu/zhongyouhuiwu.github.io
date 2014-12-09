@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Zyhw'Blog]]></title>
-  <subtitle><![CDATA[大鹏一日同风起，扶摇直上九万里 —— 李白]]></subtitle>
+  <subtitle><![CDATA[肉合子-rouhezi.com]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://z.26ji.com/"/>
-  <updated>2014-12-07T13:29:08.732Z</updated>
-  <id>http://z.26ji.com/</id>
+  <link href="http://rouhezi.com/"/>
+  <updated>2014-12-09T10:22:39.128Z</updated>
+  <id>http://rouhezi.com/</id>
   
   <author>
     <name><![CDATA[Zyhw]]></name>
-    
+    <email><![CDATA[zyhw.zyhw@gmail.com]]></email>
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
     <title><![CDATA[Github push时重复输入用户名密码的问题]]></title>
-    <link href="http://z.26ji.com/2014/12/07/zyhw08/"/>
-    <id>http://z.26ji.com/2014/12/07/zyhw08/</id>
+    <link href="http://rouhezi.com/2014/12/07/zyhw08/"/>
+    <id>http://rouhezi.com/2014/12/07/zyhw08/</id>
     <published>2014-12-07T13:05:39.000Z</published>
     <updated>2014-12-07T13:28:06.000Z</updated>
     <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码。尽管github提供了SSH方式进行本地和服务端的链接，可是按照网站说明设置好之后，这个问题仍然存在。可以尝试下面方法：</p>
@@ -36,20 +36,21 @@
     <![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码。尽管github提供了SSH方式进行本地和服务端的链接，可是按照网站说明设置好]]>
     </summary>
     
-      <category term="github" scheme="http://z.26ji.com/tags/github/"/>
+      <category term="github" scheme="http://rouhezi.com/tags/github/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[EPUB内嵌入DIY字体]]></title>
-    <link href="http://z.26ji.com/2014/12/06/zyhw07/"/>
-    <id>http://z.26ji.com/2014/12/06/zyhw07/</id>
+    <link href="http://rouhezi.com/2014/12/06/zyhw07/"/>
+    <id>http://rouhezi.com/2014/12/06/zyhw07/</id>
     <published>2014-12-06T09:19:48.000Z</published>
     <updated>2014-12-06T09:21:46.000Z</updated>
     <content type="html"><![CDATA[<p>矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。</p>
-<h2 id="制作字体">制作字体</h2><ul>
+<h2 id="制作字体">制作字体</h2>
+<ul>
 <li>首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。</li>
 </ul>
 <p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02c99jnqj30fy04jwez.jpg" alt="软件"></p>
@@ -85,7 +86,8 @@
 </ul>
 <p><img src="http://ww1.sinaimg.cn/mw690/005xAU1Stw1en02ccgjiej30fz0abq4m.jpg" alt="epub内嵌字体"></p>
 <p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ccs2x7j30da038glj.jpg" alt="epub内嵌字体"></p>
-<h2 id="内嵌字体到epub">内嵌字体到epub</h2><ul>
+<h2 id="内嵌字体到epub">内嵌字体到epub</h2>
+<ul>
 <li>打开sigil对着资源管理器的fonts文件夹右键添加字体</li>
 </ul>
 <p><img src="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cd8i32j3063029a9z.jpg" alt="epub内嵌字体"></p>
@@ -93,7 +95,8 @@
 <li>CSS这样写</li>
 </ul>
 <p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02cdm3goj307s03sjre.jpg" alt="epub内嵌字体"></p>
-<h2 id="兼容苹果方法">兼容苹果方法</h2><ul>
+<h2 id="兼容苹果方法">兼容苹果方法</h2>
+<ul>
 <li>新建txt，内容为</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">display_options</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">platform</span> <span class="attribute">name</span>=<span class="value">"*"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">option</span> <span class="attribute">name</span>=<span class="value">"specified-fonts"</span>&gt;</span>true<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">platform</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">display_options</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -105,11 +108,13 @@
 </li>
 </ul>
 <p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ce0h2yj30af03tq34.jpg" alt="epub内嵌字体"></p>
-<h2 id="效果参考">效果参考</h2><p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02ceji72j318g0zkn1t.jpg" alt="epub内嵌字体"></p>
+<h2 id="效果参考">效果参考</h2>
+<p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02ceji72j318g0zkn1t.jpg" alt="epub内嵌字体"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。</p>
-<h2 id="制作字体">制作字体</h2><ul>
+<h2 id="制作字体">制作字体</h2>
+<ul>
 <li>首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。</li>
 </ul>
 <p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02c99jnqj30fy04jwez.jpg" alt="软件"></p>
@@ -122,19 +127,20 @@
     
     </summary>
     
-      <category term="EPUB" scheme="http://z.26ji.com/tags/EPUB/"/>
+      <category term="EPUB" scheme="http://rouhezi.com/tags/EPUB/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[emeditor利用书签提取小说标题]]></title>
-    <link href="http://z.26ji.com/2014/12/05/zyhw06/"/>
-    <id>http://z.26ji.com/2014/12/05/zyhw06/</id>
+    <link href="http://rouhezi.com/2014/12/05/zyhw06/"/>
+    <id>http://rouhezi.com/2014/12/05/zyhw06/</id>
     <published>2014-12-05T08:05:00.000Z</published>
     <updated>2014-12-05T08:06:20.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2><ul>
+    <content type="html"><![CDATA[<h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2>
+<ul>
 <li>利用正则<code>第.*[卷章]</code>查找到卷章。</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">    我是一个段落</div><div class="line">	</div><div class="line">第二章 标题</div><div class="line">	我是一个段落</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">	我是一个段落</div><div class="line">第四章 标题</div><div class="line">	我是一个段落</div><div class="line">第五章 标题</div><div class="line">	我是一个段落</div><div class="line">第六章 标题</div><div class="line">	我是一个段落</div></pre></td></tr></table></figure>
@@ -144,7 +150,8 @@
 <p>  <img src="http://ww2.sinaimg.cn/large/005xAU1Stw1emyurpmqpnj30gj0d9tau.jpg" alt="设为书签"></p>
 </li>
 </ul>
-<h2 id="二、提取出来符合条件的字符串">二、提取出来符合条件的字符串</h2><ul>
+<h2 id="二、提取出来符合条件的字符串">二、提取出来符合条件的字符串</h2>
+<ul>
 <li><p>文档右键-》书签-》当前文档-》提取以添加书签的行到新文件，如下图：</p>
 <p>  <img src="http://ww1.sinaimg.cn/large/005xAU1Stw1emyurq3wzhj30h409r3zu.jpg" alt="提取书签"></p>
 </li>
@@ -153,26 +160,28 @@
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">第二章 标题</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">第四章 标题</div><div class="line">第五章 标题</div><div class="line">第六章 标题</div></pre></td></tr></table></figure>
 
-<h2 id="三、在二中可以反转书签，得到相反的内容。">三、在二中可以反转书签，得到相反的内容。</h2>]]></content>
+<h2 id="三、在二中可以反转书签，得到相反的内容。">三、在二中可以反转书签，得到相反的内容。</h2>
+]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2><ul>
+    <![CDATA[<h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2>
+<ul>
 <li>利用正则<code>第.*[卷章]</code>查找到卷章。</li>
 </ul>
-<figure class="highlight"><table><tr><td cla]]>
+<figure class="highlight"><table><tr><td cl]]>
     </summary>
     
-      <category term="emeditor" scheme="http://z.26ji.com/tags/emeditor/"/>
+      <category term="emeditor" scheme="http://rouhezi.com/tags/emeditor/"/>
     
-      <category term="txt" scheme="http://z.26ji.com/tags/txt/"/>
+      <category term="txt" scheme="http://rouhezi.com/tags/txt/"/>
     
-      <category term="工具" scheme="http://z.26ji.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://rouhezi.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[pureftpd安装-Error]]></title>
-    <link href="http://z.26ji.com/2014/11/28/zyhw05/"/>
-    <id>http://z.26ji.com/2014/11/28/zyhw05/</id>
+    <link href="http://rouhezi.com/2014/11/28/zyhw05/"/>
+    <id>http://rouhezi.com/2014/11/28/zyhw05/</id>
     <published>2014-11-28T10:58:00.000Z</published>
     <updated>2014-11-28T11:00:38.000Z</updated>
     <content type="html"><![CDATA[<p><code>pureftpd安装-Error: Table &#39;admin&#39; from database &#39;ftpusers&#39; doesn&#39;t exist.</code></p>
@@ -188,16 +197,16 @@
 <p>这是因为MySQL 5.1和5.5下的语句有些不同]]>
     </summary>
     
-      <category term="pureftpd" scheme="http://z.26ji.com/tags/pureftpd/"/>
+      <category term="pureftpd" scheme="http://rouhezi.com/tags/pureftpd/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[火狐stylish搜索样式之百度]]></title>
-    <link href="http://z.26ji.com/2014/11/28/zyhw04/"/>
-    <id>http://z.26ji.com/2014/11/28/zyhw04/</id>
+    <link href="http://rouhezi.com/2014/11/28/zyhw04/"/>
+    <id>http://rouhezi.com/2014/11/28/zyhw04/</id>
     <published>2014-11-28T10:53:00.000Z</published>
     <updated>2014-11-28T10:53:35.000Z</updated>
     <content type="html"><![CDATA[<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="at_rule">@<span class="keyword">-moz-document</span> <span class="function">regexp</span>(<span class="string">"^http://www\.baidu\.com/s.*"</span>),  </span></div><div class="line"><span class="function">regexp</span>(<span class="string">"^http://www\.baidu\.com/baidu.*"</span>),  </div><div class="line"><span class="function">regexp</span>(<span class="string">"^http://www\.baidu\.com/.*"</span>) {</div><div class="line">   </div><div class="line"><span class="comment">/* 百度搜索上方浮动条紧凑化 loge 搜索条 右上用户条 */</span></div><div class="line"><span class="id">#result_logo</span> <span class="rules">{ <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">1px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#form</span> <span class="rules">{ <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">5px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#u</span> <span class="rules">{ <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">5px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 调整上方高度以适应 searchEngineJump 脚本工具条 */</span></div><div class="line"><span class="class">.s_form</span> <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">34px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 调整百度搜索标签高度 */</span></div><div class="line"><span class="id">#s_tab</span> <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">30px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#s_tab</span> &gt; * <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">28px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 隐藏计数 */</span></div><div class="line"><span class="class">.nums</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> none <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 隐藏右边相关 */</span></div><div class="line"><span class="id">#content_right</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> none <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 让搜索内容可以排满全屏 */</span></div><div class="line"><span class="id">#container</span><span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span> <span class="important">!important</span></span></span>; <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0px</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 让出一点左边距，前面的百分比就是，嫌窄了可以自行修改，</span></div><div class="line">   但最好能让前后两个百分比加起来刚好是100%，这样既不会浪费空间，又不会把页面撑大 */</div><div class="line"><span class="id">#content_left</span> <span class="rules">{ <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">0.6%</span> <span class="important">!important</span></span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">99.4%</span> <span class="important">!important</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="comment">/* 页面内容分为2列，并设置列间距为0px，</span></div><div class="line">   需要设置3列或更多列的同学请自行修改，当然相应的下面的搜索结果条目的宽度也需要相应的修改 */</div><div class="line"><span class="id">#content_left</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">-moz-column-count</span>:<span class="value"> <span class="number">2</span> <span class="important">!important</span></span></span>;</div><div class="line">    <span class="rule"><span class="attribute">-moz-column-gap</span>:<span class="value"> <span class="number">0px</span> <span class="important">!important</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
@@ -214,16 +223,16 @@
     
     </summary>
     
-      <category term="stylish" scheme="http://z.26ji.com/tags/stylish/"/>
+      <category term="stylish" scheme="http://rouhezi.com/tags/stylish/"/>
     
-      <category term="火狐" scheme="http://z.26ji.com/categories/%E7%81%AB%E7%8B%90/"/>
+      <category term="火狐" scheme="http://rouhezi.com/categories/%E7%81%AB%E7%8B%90/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[PS无论怎么放大或设置最大字号，字体还是很小]]></title>
-    <link href="http://z.26ji.com/2014/11/28/zyhw03/"/>
-    <id>http://z.26ji.com/2014/11/28/zyhw03/</id>
+    <link href="http://rouhezi.com/2014/11/28/zyhw03/"/>
+    <id>http://rouhezi.com/2014/11/28/zyhw03/</id>
     <published>2014-11-28T10:18:00.000Z</published>
     <updated>2014-11-28T10:18:59.000Z</updated>
     <content type="html"><![CDATA[<p>使用PS处理一些图片的时候，可能会碰到这样的情况，新建一个文字图层，打上文字，却发现文字字号特别小，无论怎么放大，都还是特别的小。</p>
@@ -243,53 +252,61 @@
 <li>Alt+Ctrl+I快捷键打开“图像大小”你会发现分辨率一栏的数字异常，变成了一]]>
     </summary>
     
-      <category term="Photoshop" scheme="http://z.26ji.com/tags/Photoshop/"/>
+      <category term="Photoshop" scheme="http://rouhezi.com/tags/Photoshop/"/>
     
-      <category term="工具" scheme="http://z.26ji.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://rouhezi.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[autohotkey快速输入文本内容]]></title>
-    <link href="http://z.26ji.com/2014/11/08/20141108/"/>
-    <id>http://z.26ji.com/2014/11/08/20141108/</id>
+    <link href="http://rouhezi.com/2014/11/08/20141108/"/>
+    <id>http://rouhezi.com/2014/11/08/20141108/</id>
     <published>2014-11-08T04:11:44.000Z</published>
     <updated>2014-11-08T04:23:21.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="定义多行文本内容快速输入">定义多行文本内容快速输入</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">::chunsi::</span></div><div class="line">(</div><div class="line">《春思》【唐】李白</div><div class="line">燕草如碧丝，秦桑低绿枝。当君怀归日，</div><div class="line">是妾断肠时。春风不相识，何事入罗帏？</div><div class="line">)</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h2 id="定义多行文本内容快速输入">定义多行文本内容快速输入</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">::chunsi::</span></div><div class="line">(</div><div class="line">《春思》【唐】李白</div><div class="line">燕草如碧丝，秦桑低绿枝。当君怀归日，</div><div class="line">是妾断肠时。春风不相识，何事入罗帏？</div><div class="line">)</div></pre></td></tr></table></figure>
 
 <p>上述代码保存为ahk，运行。然后输入chunsi空格键就会快速输入圆括号内的诗文。如果单行内容直接定义冒号后面就行，不需要圆括号。</p>
-<h2 id="特殊字符的输入需要转义">特殊字符的输入需要转义</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="pseudo">::a</span>::<span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">^}</span></span></div></pre></td></tr></table></figure>
+<h2 id="特殊字符的输入需要转义">特殊字符的输入需要转义</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="pseudo">::a</span>::<span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">^}</span></span></div></pre></td></tr></table></figure>
 
 <p>比如上面的代码就是输入a后空格后换为<code>!!!^</code>这些字符。</p>
-<h2 id="转义顺序-(当重音符是转义符号时)">转义顺序 (当重音符是转义符号时)</h2><p>转义字符用来表明其后紧跟的字符应该被解释地与它通常的含义不同。</p>
+<h2 id="转义顺序_(当重音符是转义符号时)">转义顺序 (当重音符是转义符号时)</h2>
+<p>转义字符用来表明其后紧跟的字符应该被解释地与它通常的含义不同。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">`, , (原义的逗号)。注意: 在命令最后一个参数里出现的逗号不需要被转义，因为程序知道将它们视作原义。同样也适用于 MsgBox 命令的所有参数，因为它有智能的逗号处理功能。 </div><div class="line">`% % (原义的百分号) </div><div class="line">`` ` (原义的重音符；也就是两个连续的转义字符结果为单个原义的字符) </div><div class="line">`;  ; (原义的分号)。注意: 这只有在分号的左边有一个空格或 <span class="constant">tab</span> 时才有必要。如果没有，它会被正确地识别而不用转义。 </div><div class="line">`:: :: (一对原义的冒号)。在 v1<span class="number">.0</span><span class="number">.40</span>+ 版本之后，它不再需要被转义。 </div><div class="line">`n 新起一行 (换行/LF) </div><div class="line">`r 回车 (<span class="constant">CR</span>) </div><div class="line">`b 退格 </div><div class="line">`t <span class="constant">tab</span> (很典型的水平的移位) </div><div class="line">`v 垂直的 <span class="constant">tab</span> <span class="comment">-- 相当于 Ascii 编码的值 11 。它也可以在一些应用程序中通过键入 Control+K 来显示。 </span></div><div class="line">`<span class="operator">a</span> alert (警告/bell) <span class="comment">-- 相当于 Ascii 编码的值 7 。它也可以在一些应用程序中通过键入 Control+G 来显示。 </span></div><div class="line">`f <span class="constant">formfeed</span>(进纸) <span class="comment">-- 相当于 Ascii 编码的值 12 。它也可以在一些应用程序中通过键入 Control+L 来显示。 </span></div><div class="line">Send 当 Send 命令 或 热字符串 以它们默认的 (非 raw) 模式使用时，像 {}^!+<span class="comment"># 这样的字符有特殊的含义。因此，在这些情况下要使用它们的原义就得将它们围在大括号内。例如： Send {^}{!}{{} </span></div><div class="line"><span class="string">""</span> 在 表达式 内，一个原义的字符串内的两个连续的引号解析为单个原义的引号。例如： Var := <span class="string">"The color "</span><span class="string">"red"</span><span class="string">" was found."</span></div></pre></td></tr></table></figure>
 
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="定义多行文本内容快速输入">定义多行文本内容快速输入</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="lin]]>
+    <![CDATA[<h2 id="定义多行文本内容快速输入">定义多行文本内容快速输入</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="li]]>
     </summary>
     
-      <category term="autohotkey" scheme="http://z.26ji.com/tags/autohotkey/"/>
+      <category term="autohotkey" scheme="http://rouhezi.com/tags/autohotkey/"/>
     
-      <category term="工具" scheme="http://z.26ji.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://rouhezi.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[github新建Repositories后具体操作步骤]]></title>
-    <link href="http://z.26ji.com/2014/10/31/zyhw02/"/>
-    <id>http://z.26ji.com/2014/10/31/zyhw02/</id>
+    <link href="http://rouhezi.com/2014/10/31/zyhw02/"/>
+    <id>http://rouhezi.com/2014/10/31/zyhw02/</id>
     <published>2014-10-31T15:41:32.000Z</published>
     <updated>2014-10-31T16:06:59.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="添加用户信息">添加用户信息</h2><p>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
+    <content type="html"><![CDATA[<h2 id="添加用户信息">添加用户信息</h2>
+<p>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global <span class="literal">user</span>.name <span class="string">"用户名"</span></div><div class="line">git config --global <span class="literal">user</span>.email <span class="string">"你的Email"</span></div></pre></td></tr></table></figure>
 
-<h2 id="生成ssh密钥并添加到github">生成SSH密钥并添加到github</h2><p>查看是否已经有了ssh密钥：<code>cd ~/.ssh</code>。如果没有密钥则不会有此文件夹，有则备份删除。</p>
+<h2 id="生成SSH密钥并添加到github">生成SSH密钥并添加到github</h2>
+<p>查看是否已经有了ssh密钥：<code>cd ~/.ssh</code>。如果没有密钥则不会有此文件夹，有则备份删除。</p>
 <p><code>ssh-keygen -t rsa -C “你的注册邮箱”</code></p>
 <p>按3个回车，密码为空。最后得到了两个文件：id_rsa和id_rsa.pub，添加id_rsa.pub中的所有到github中的SSH Keys中。</p>
-<h2 id="新建工作目录，并初始化本地新仓库">新建工作目录，并初始化本地新仓库</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line"><span class="keyword">echo</span> <span class="string">"# This is my README"</span> &gt;&gt; README.md    //建立README.md文件并且内容是# This <span class="keyword">is</span> my README</div><div class="line">git <span class="built_in">add</span> .  //把所有文件加入到索引（不想把所有文件加入，可以用gitignore或<span class="built_in">add</span> 具体文件)</div><div class="line">git commit -<span class="keyword">m</span> <span class="string">"First Commit. Adding a README."</span>  //提交到本地仓库，然后会填写更新日志( -<span class="keyword">m</span> “更新日志”也可)</div></pre></td></tr></table></figure>
+<h2 id="新建工作目录，并初始化本地新仓库">新建工作目录，并初始化本地新仓库</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line"><span class="keyword">echo</span> <span class="string">"# This is my README"</span> &gt;&gt; README.md    //建立README.md文件并且内容是# This <span class="keyword">is</span> my README</div><div class="line">git <span class="built_in">add</span> .  //把所有文件加入到索引（不想把所有文件加入，可以用gitignore或<span class="built_in">add</span> 具体文件)</div><div class="line">git commit -<span class="keyword">m</span> <span class="string">"First Commit. Adding a README."</span>  //提交到本地仓库，然后会填写更新日志( -<span class="keyword">m</span> “更新日志”也可)</div></pre></td></tr></table></figure>
 
-<h2 id="添加远程仓库并推送数据到远程仓库">添加远程仓库并推送数据到远程仓库</h2><ul>
+<h2 id="添加远程仓库并推送数据到远程仓库">添加远程仓库并推送数据到远程仓库</h2>
+<ul>
 <li>要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用，运行 <code>git remote add [shortname] [url]</code></li>
 </ul>
 <p>如下就是添加的名字是origin的仓库，一般默认的都是这个。</p>
@@ -301,7 +318,9 @@
 <p>如果要把本地的 master 分支推送到 origin 服务器上（再次说明下，克隆操作会自动使用默认的 master 和 origin 名字），可以运行下面的命令：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">push</span> -u origin master</div></pre></td></tr></table></figure>
 
-<h2 id="之后就是重复上述操作（排除init和romote的操作）">之后就是重复上述操作（排除init和romote的操作）</h2><h2 id="其他常用命令">其他常用命令</h2><ul>
+<h2 id="之后就是重复上述操作（排除init和romote的操作）">之后就是重复上述操作（排除init和romote的操作）</h2>
+<h2 id="其他常用命令">其他常用命令</h2>
+<ul>
 <li>更新项目（新加了文件）：</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ~/hello-world</div><div class="line">git <span class="built_in">add</span> .<span class="comment"> //这样可以自动判断新加了哪些文件，或者手动加入文件名字</span></div><div class="line">git commit<span class="comment"> //提交到本地仓库</span></div><div class="line">git push origin master<span class="comment"> //不是新创建的，不用再add 到remote上了</span></div></pre></td></tr></table></figure>
@@ -329,7 +348,8 @@
 <li>删除</li>
 </ul>
 <p><code>git rm *</code> // 不是用rm</p>
-<h2 id="常见错误">常见错误</h2><p>1.<code>$ git remote add origin git@github.com:zhongyouhuiwu/ceshi.git</code></p>
+<h2 id="常见错误">常见错误</h2>
+<p>1.<code>$ git remote add origin git@github.com:zhongyouhuiwu/ceshi.git</code></p>
 <p>错误提示：<code>fatal: remote origin already exists.</code></p>
 <p>解决办法：<code>$ git remote rm origin</code></p>
 <p>然后在执行：<code>$ git remote add origin</code> <code>git@github.com:zhongyouhuiwu/ceshi.git</code> 就不会报错误了</p>
@@ -340,29 +360,32 @@
 <p>解决办法：<code>$ git pull origin master</code> //先把远程服务器github上面的文件拉先来，再push 上去。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="添加用户信息">添加用户信息</h2><p>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
-<figure class="highlig]]>
+    <![CDATA[<h2 id="添加用户信息">添加用户信息</h2>
+<p>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
+<figure class="highli]]>
     </summary>
     
-      <category term="github" scheme="http://z.26ji.com/tags/github/"/>
+      <category term="github" scheme="http://rouhezi.com/tags/github/"/>
     
-      <category term="博客" scheme="http://z.26ji.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://rouhezi.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[github绑定域名介绍]]></title>
-    <link href="http://z.26ji.com/2014/10/30/zyhw01/"/>
-    <id>http://z.26ji.com/2014/10/30/zyhw01/</id>
+    <link href="http://rouhezi.com/2014/10/30/zyhw01/"/>
+    <id>http://rouhezi.com/2014/10/30/zyhw01/</id>
     <published>2014-10-30T07:29:57.000Z</published>
     <updated>2014-10-30T07:43:10.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="主域名绑定">主域名绑定</h2><ul>
+    <content type="html"><![CDATA[<h2 id="主域名绑定">主域名绑定</h2>
+<ul>
 <li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
 </li>
 <li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code>(xx根据自己情况修改)，说明cname是成功的。等待一段时间就可以直接用域名访问了。</p>
 </li>
 </ul>
-<h2 id="二级域名绑定">二级域名绑定</h2><ul>
+<h2 id="二级域名绑定">二级域名绑定</h2>
+<ul>
 <li><p>设置主机记录github，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名,这个主机记录可以随便写，只要保持一致就行）</p>
 </li>
 <li><p>设置主机记录xx.github.io(xx根据自己情况修改)，类型CNAME，到github.xx.com(xx根据自己情况修改).</p>
@@ -375,28 +398,30 @@
 <p>参考： <a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a> 最终绑定成功。然而还有些没有写明的地方，走了不少弯路，特把我的实际情况写下来</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="主域名绑定">主域名绑定</h2><ul>
+    <![CDATA[<h2 id="主域名绑定">主域名绑定</h2>
+<ul>
 <li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
 </li>
-<li><p>在你所建<code>repositories</cod]]>
+<li><p>在你所建<code>repositories</co]]>
     </summary>
     
-      <category term="Hexo" scheme="http://z.26ji.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://rouhezi.com/tags/Hexo/"/>
     
-      <category term="github" scheme="http://z.26ji.com/tags/github/"/>
+      <category term="github" scheme="http://rouhezi.com/tags/github/"/>
     
-      <category term="博客" scheme="http://z.26ji.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://rouhezi.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo部署成功后续问题]]></title>
-    <link href="http://z.26ji.com/2014/10/29/2014102901/"/>
-    <id>http://z.26ji.com/2014/10/29/2014102901/</id>
+    <link href="http://rouhezi.com/2014/10/29/2014102901/"/>
+    <id>http://rouhezi.com/2014/10/29/2014102901/</id>
     <published>2014-10-29T09:48:03.000Z</published>
     <updated>2014-10-29T10:19:31.000Z</updated>
     <content type="html"><![CDATA[<p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
-<h1 id="添加rss">添加RSS</h1><p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
+<h1 id="添加RSS">添加RSS</h1>
+<p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
 <ul>
 <li>安装RSS插件到本地：<code>npm install hexo-generator-feed</code></li>
 <li>开启RSS功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
@@ -408,7 +433,8 @@
 </ul>
 <p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
 <p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
-<h1 id="添加sitemap">添加sitemap</h1><p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
+<h1 id="添加sitemap">添加sitemap</h1>
+<p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
 <ul>
 <li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
 <li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
@@ -416,39 +442,46 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-sitemap</div></pre></td></tr></table></figure>
 
 <p>访问<code>127.0.0.1:4000/sitemap.xml</code>即可看到站点地图。不过，sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。</p>
-<h1 id="插入本地图片">插入本地图片</h1><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。
-使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
-<h1 id="bug:「warning:-lf-will-be-replaced-by-crlf」">bug:「warning: LF will be replaced by CRLF」</h1><p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
+<h1 id="插入本地图片">插入本地图片</h1>
+<p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。<br>使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
+<h1 id="bug:「warning:_LF_will_be_replaced_by_CRLF」">bug:「warning: LF will be replaced by CRLF」</h1>
+<p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
 <ul>
 <li>切换到博客的根目录，执行如下命令：<code>git config --global core.autocrlf false</code></li>
 <li>删除掉该目录下的<code>.git</code>文件夹（可能是隐藏的），命令：<code>rm -rf .git</code></li>
 <li>重新<code>git init</code>。</li>
 </ul>
 <p>再deploy试试吧，清新脱俗了。</p>
-<h1 id="bug:<code>hexo-deploy</code>没反应">bug:<code>hexo deploy</code>没反应</h1><p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
-<h1 id="bug:<code>hexo-update--g</code>升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h1><p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
-<h1 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h1><p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
+<h1 id="bug:hexo_deploy没反应">bug:<code>hexo deploy</code>没反应</h1>
+<p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
+<h1 id="bug:hexo_update_-g升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h1>
+<p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
+<h1 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h1>
+<p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
 <p>打开根目录下的config文件，第15行，<code>url:</code>，自觉填上吧。</p>
-<h1 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h1><p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
-<h1 id="修改<code>_config.yml</code>">修改<code>_config.yml</code></h1><p>所以参数都需要空格然后再设置数据</p>
+<h1 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h1>
+<p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
+<h1 id="修改_config-yml">修改<code>_config.yml</code></h1>
+<p>所以参数都需要空格然后再设置数据</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
-<h1 id="添加rss">添加RSS</h1><p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
+<h1 id="添加RSS">添加RSS</h1>
+<p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
 <ul>
-<li>安装RSS插件到本地：<code>npm install hexo-g]]>
+<li>安装RSS插件到本地：<code>npm install hexo-]]>
     </summary>
     
-      <category term="Hexo" scheme="http://z.26ji.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://rouhezi.com/tags/Hexo/"/>
     
-      <category term="博客" scheme="http://z.26ji.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://rouhezi.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo博客tags有历史残留清除方法]]></title>
-    <link href="http://z.26ji.com/2014/10/26/2014102601/"/>
-    <id>http://z.26ji.com/2014/10/26/2014102601/</id>
+    <link href="http://rouhezi.com/2014/10/26/2014102601/"/>
+    <id>http://rouhezi.com/2014/10/26/2014102601/</id>
     <published>2014-10-26T00:44:25.000Z</published>
     <updated>2014-10-29T09:49:46.000Z</updated>
     <content type="html"><![CDATA[<p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
@@ -463,69 +496,76 @@
 <figure class="highligh]]>
     </summary>
     
-      <category term="Hexo" scheme="http://z.26ji.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://rouhezi.com/tags/Hexo/"/>
     
-      <category term="博客" scheme="http://z.26ji.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://rouhezi.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[测试EverEdit中Markdown的模板可用性]]></title>
-    <link href="http://z.26ji.com/2014/10/25/2014102501/"/>
-    <id>http://z.26ji.com/2014/10/25/2014102501/</id>
+    <link href="http://rouhezi.com/2014/10/25/2014102501/"/>
+    <id>http://rouhezi.com/2014/10/25/2014102501/</id>
     <published>2014-10-25T05:56:54.000Z</published>
     <updated>2014-10-25T06:00:50.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="我是用一级标题写的">我是用一级标题写的</h1><blockquote>
+    <content type="html"><![CDATA[<h1 id="我是用一级标题写的">我是用一级标题写的</h1>
+<blockquote>
 <p>一万年太久，只争朝夕。——毛泽东</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span> xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=<span class="string">"utf-8"</span> /&gt;</div><div class="line">	&lt;title&gt;New Document&lt;/title&gt;</div><div class="line">	&lt;meta name=<span class="string">"generator"</span> content=<span class="string">"EverEdit"</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"author"</span> content=<span class="string">""</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"keywords"</span> content=<span class="string">""</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span> /&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	hello world</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="我是用一级标题写的">我是用一级标题写的</h1><blockquote>
+    <![CDATA[<h1 id="我是用一级标题写的">我是用一级标题写的</h1>
+<blockquote>
 <p>一万年太久，只争朝夕。——毛泽东</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gut]]>
+<figure class="highlight bash"><table><tr><td class="gu]]>
     </summary>
     
-      <category term="Markdown" scheme="http://z.26ji.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://rouhezi.com/tags/Markdown/"/>
     
-      <category term="txt" scheme="http://z.26ji.com/tags/txt/"/>
+      <category term="txt" scheme="http://rouhezi.com/tags/txt/"/>
     
-      <category term="工具" scheme="http://z.26ji.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://rouhezi.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Markdown初学之标题与引用]]></title>
-    <link href="http://z.26ji.com/2014/10/24/20141024-4/"/>
-    <id>http://z.26ji.com/2014/10/24/20141024-4/</id>
+    <link href="http://rouhezi.com/2014/10/24/20141024-4/"/>
+    <id>http://rouhezi.com/2014/10/24/20141024-4/</id>
     <published>2014-10-24T08:56:52.000Z</published>
     <updated>2014-10-24T10:22:42.000Z</updated>
     <content type="html"><![CDATA[<p><code>#这里是一级标题的写法</code></p>
-<h1 id="这里是一级标题">这里是一级标题</h1><p><code>###这里是三级标题的写法</code></p>
-<h3 id="这里是三级标题">这里是三级标题</h3><p><code>######这里是六级标题的写法，就到这里了，木有七级！</code></p>
-<h6 id="这里是六级标题，就到这里了，木有七级！">这里是六级标题，就到这里了，木有七级！</h6><p><code>&gt; 引用内容，多行的话，用两个空格结尾吧。这里是引用的写法</code></p>
+<h1 id="这里是一级标题">这里是一级标题</h1>
+<p><code>###这里是三级标题的写法</code></p>
+<h3 id="这里是三级标题">这里是三级标题</h3>
+<p><code>######这里是六级标题的写法，就到这里了，木有七级！</code></p>
+<h6 id="这里是六级标题，就到这里了，木有七级！">这里是六级标题，就到这里了，木有七级！</h6>
+<p><code>&gt; 引用内容，多行的话，用两个空格结尾吧。这里是引用的写法</code></p>
 <blockquote>
 <p>引用内容，多行的话，用两个空格结尾吧</p>
 </blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><code>#这里是一级标题的写法</code></p>
-<h1 id="这里是一级标题">这里是一级标题</h1><p><code>###这里是三级标题的写法</code></p>
-<h3 id="这里是三级标题">这里是三级标题</h3><p><code>######这]]>
+<h1 id="这里是一级标题">这里是一级标题</h1>
+<p><code>###这里是三级标题的写法</code></p>
+<h3 id="这里是三级标题">这里是三级标题</h3>
+<p><code>#####]]>
     </summary>
     
-      <category term="Markdown" scheme="http://z.26ji.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://rouhezi.com/tags/Markdown/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Markdown初学之图片与超链接]]></title>
-    <link href="http://z.26ji.com/2014/10/24/20141024-3/"/>
-    <id>http://z.26ji.com/2014/10/24/20141024-3/</id>
+    <link href="http://rouhezi.com/2014/10/24/20141024-3/"/>
+    <id>http://rouhezi.com/2014/10/24/20141024-3/</id>
     <published>2014-10-24T03:38:25.000Z</published>
     <updated>2014-10-24T10:15:25.000Z</updated>
     <content type="html"><![CDATA[<p>超链接的格式是方括号，里面是超链接名称，后面跟圆括号，里面是地址。如下</p>
@@ -540,16 +580,16 @@
 <p>图片插入：感叹号，后面]]>
     </summary>
     
-      <category term="Markdown" scheme="http://z.26ji.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://rouhezi.com/tags/Markdown/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Markdown初学之代码]]></title>
-    <link href="http://z.26ji.com/2014/10/24/20141024-2/"/>
-    <id>http://z.26ji.com/2014/10/24/20141024-2/</id>
+    <link href="http://rouhezi.com/2014/10/24/20141024-2/"/>
+    <id>http://rouhezi.com/2014/10/24/20141024-2/</id>
     <published>2014-10-24T03:17:53.000Z</published>
     <updated>2014-10-24T09:56:23.000Z</updated>
     <content type="html"><![CDATA[<p>代码高亮显示，需要每行都空半角空格四个，另起一个段落给代码，段落代码是两个回车键。</p>
@@ -570,29 +610,34 @@
 </code></pre><p>代码高亮显示，需要三个反引号,然后空格bash，然后代码，最后需要三]]>
     </summary>
     
-      <category term="Markdown" scheme="http://z.26ji.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://rouhezi.com/tags/Markdown/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Markdown本身标准]]></title>
-    <link href="http://z.26ji.com/2014/10/24/20141024-1/"/>
-    <id>http://z.26ji.com/2014/10/24/20141024-1/</id>
+    <link href="http://rouhezi.com/2014/10/24/20141024-1/"/>
+    <id>http://rouhezi.com/2014/10/24/20141024-1/</id>
     <published>2014-10-24T02:17:53.000Z</published>
     <updated>2014-10-29T08:59:14.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="Run_server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 
 <p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="Generate_static_files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 
 <p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
@@ -600,9 +645,9 @@
     <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
     </summary>
     
-      <category term="Markdown" scheme="http://z.26ji.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://rouhezi.com/tags/Markdown/"/>
     
-      <category term="技术" scheme="http://z.26ji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://rouhezi.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

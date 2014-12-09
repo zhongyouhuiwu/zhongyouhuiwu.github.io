@@ -1,137 +1,119 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>github绑定域名介绍 | Zyhw&#39;Blog</title>
+  <meta name="author" content="Zyhw">
+  
+  <meta name="description" content="rouhezi.com">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="主域名绑定
-在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
 
-在你所建repositories中，新建一个文件CNAME，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看repositories的setting中有Your site is published at http://xx.com(xx根">
-<meta property="og:type" content="article">
-<meta property="og:title" content="github绑定域名介绍">
-<meta property="og:url" content="http://z.26ji.com/2014/10/30/zyhw01/">
-<meta property="og:site_name" content="Zyhw'Blog">
-<meta property="og:description" content="主域名绑定
-在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
+  <meta property="og:title" content="github绑定域名介绍"/>
+  <meta property="og:site_name" content="Zyhw&#39;Blog"/>
 
-在你所建repositories中，新建一个文件CNAME，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看repositories的setting中有Your site is published at http://xx.com(xx根">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github绑定域名介绍">
-<meta name="twitter:description" content="主域名绑定
-在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
-
-在你所建repositories中，新建一个文件CNAME，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看repositories的setting中有Your site is published at http://xx.com(xx根">
+  
+    <meta property="og:image" content="undefined"/>
+  
 
   
     <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
   
   
- <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="/favicon.png" rel="icon">
   
-  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
-
-  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
   
 
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
-    <div class="collapse navbar-collapse nav-menu">
-      <ul class="nav navbar-nav">
-      
-        <li>
-          <a href="/archives">
-            <i class="fa fa-archive"></i>
-            Archives
-          </a>
-        </li>
-      
-        <li>
-          <a href="/categories">
-            <i class="fa fa-folder"></i>
-            Categories
-          </a>
-        </li>
-      
-        <li>
-          <a href="/tags">
-            <i class="fa fa-tags"></i>
-            Tags
-          </a>
-        </li>
-      
-        <li>
-          <a href="/wiki">
-            <i class="fa fa-book"></i>
-            Wiki
-          </a>
-        </li>
-      
-        <li>
-          <a href="/about">
-            <i class="fa fa-user"></i>
-            About
-          </a>
-        </li>
-      
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-          <li><a id="rss-link" href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
 </nav>
 <div class="clearfix"></div>
 
-      <div id='content' class="container">
+  <div class="container">
+  	<div class="content">
+    	 
 
-        <div class="page-header-wrapper">
-          <!--[if lt IE 9]><div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>提示:</strong>您的浏览器版本太低了,建议升级到 <strong><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="IE9">IE9</a></strong> 以上,本站使用<a href="https://www.google.com/intl/zh-CN/chrome/">Chrome浏览器</a>可以获得最好的显示效果.</div><![endif]-->
-          <div class="page-header">
-            <h1 class="title">
-          
-            github绑定域名介绍
-          
-            </h1>
-        </div>
-      </div>
-      
-      <section id="main"
-        
-      ><article id="post-jn3m7w8349sdbnja" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
 
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div id="toc"><span class="toc-header">Contents</span><ol class="article-toc"><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#主域名绑定"><span class="article-toc-text">主域名绑定</span></a></li><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#二级域名绑定"><span class="article-toc-text">二级域名绑定</span></a></li></ol></div><h2 id="主域名绑定">主域名绑定</h2><ul>
+	
+		<div class="page-header">		
+			<h1> github绑定域名介绍</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h2 id="主域名绑定">主域名绑定</h2>
+<ul>
 <li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
 </li>
 <li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code>(xx根据自己情况修改)，说明cname是成功的。等待一段时间就可以直接用域名访问了。</p>
 </li>
 </ul>
-<h2 id="二级域名绑定">二级域名绑定</h2><ul>
+<h2 id="二级域名绑定">二级域名绑定</h2>
+<ul>
 <li><p>设置主机记录github，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名,这个主机记录可以随便写，只要保持一致就行）</p>
 </li>
 <li><p>设置主机记录xx.github.io(xx根据自己情况修改)，类型CNAME，到github.xx.com(xx根据自己情况修改).</p>
@@ -142,120 +124,131 @@
 </li>
 </ul>
 <p>参考： <a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a> 最终绑定成功。然而还有些没有写明的地方，走了不少弯路，特把我的实际情况写下来</p>
+	  
+	</div>
 
-      
-    </div>
-  </div>
-</article>
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/10/31/zyhw02/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/10/29/2014102901/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+<h2 class="title">评论</h2>
+
+<div class="ds-thread" data-title="github绑定域名介绍"></div>
 
 </section>
-        
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	10月 30 2014 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
           
-<aside id="sidebar">
+  <li>
+    <li><a href="/categories/博客/">博客<span>4</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Hexo/">Hexo<span>3</span></a></li> <li><a href="/tags/github/">github<span>3</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 Zyhw
   
-    
-      
-<div class="widget-wrap center">
-  <ul class="pagination">
-    <li>
-      
-        <a href="/2014/10/31/zyhw02/" class="nav-prev">Prev</a>
-      
-    </li>
-    <li>
-      <a data-url="http://z.26ji.com/2014/10/30/zyhw01/" data-id="jn3m7w8349sdbnja" data_title="github绑定域名介绍"
-        data_summary="主域名绑定
-在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）
-
-在你所建repositories中，新建一个文件CNAME，无后缀，文件中..." class="article-share-link">Share</a>
-    </li>
-    <li>
-      
-        <a href="/2014/10/29/2014102901/" class="nav-next">Next</a>
-      
-    </li>
-  </ul>
-</div>
-
-
-    
-      <div class="widget-wrap">
-  <div class="post-widget">
-    <i class="fa fa-clock-o"></i>
-    <time datetime="2014-10-30T07:29:57.000Z" itemprop="datePublished">10月 30 2014</time>
-  </div>
-</div>
-
-    
-      
-  <div class="widget-wrap">
-    <div class="post-widget">
-      <i class="fa fa-folder"></i>
-      <a class="category-link" href="/categories/博客/">博客<span class="category-count">4</span></a>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap">
-    <div class="post-widget">
-      <i class="fa fa-tags"></i>
-      <a class="tag-link" href="/tags/Hexo/">Hexo<span class="tag-count">3</span></a><a class="tag-link" href="/tags/github/">github<span class="tag-count">3</span></a>
-    </div>
-  </div>
-
-
-    
+</p> </footer>
+</div> <!-- container-narrow -->
   
-</aside>
 
-
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer container">
-    <div id="footer-info" class="inner">
-      <a href="/">Zyhw</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
-    </div>
-  </div>
-</footer>
 <a id="gotop" href="#">
-  <i class="fa fa-chevron-up"></i>
+    <span><i class="fa fa-chevron-up"></i></span>
 </a>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="[object Object]" class="mobile-nav-link">0</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">1</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">2</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">3</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">4</a>
-  
-</nav>
 
-    
-
-<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'zyhw' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
-<script src="/js/jquery.fitvids.js" type="text/javascript"></script>
 
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-
-<script src="/js/script.js" type="text/javascript"></script>
-
-
-  </div>
 </body>
-</html>
+   </html>

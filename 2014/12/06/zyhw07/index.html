@@ -1,167 +1,113 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>EPUB内嵌入DIY字体 | Zyhw&#39;Blog</title>
+  <meta name="author" content="Zyhw">
+  
+  <meta name="description" content="rouhezi.com">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。
-制作字体
-首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。
 
+  <meta property="og:title" content="EPUB内嵌入DIY字体"/>
+  <meta property="og:site_name" content="Zyhw&#39;Blog"/>
 
-
-打开PS制作你需要的图像，最后保存成PNG。
-
-
-
-打开Font Creator，新建工程 名字随意">
-<meta property="og:type" content="article">
-<meta property="og:title" content="EPUB内嵌入DIY字体">
-<meta property="og:url" content="http://z.26ji.com/2014/12/06/zyhw07/">
-<meta property="og:site_name" content="Zyhw'Blog">
-<meta property="og:description" content="矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。
-制作字体
-首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。
-
-
-
-打开PS制作你需要的图像，最后保存成PNG。
-
-
-
-打开Font Creator，新建工程 名字随意">
-<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02c99jnqj30fy04jwez.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02c9miulj30o70fhn1p.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/005xAU1Stw1en02c9zs7aj30cu0abmy6.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cah8bwj30hi0jsacd.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02caw7vtj305205ngln.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02cb9nz3j30f80ctt9n.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02cbq6m3j309y06wt9c.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cc5fisj30ka0djwhb.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/005xAU1Stw1en02ccgjiej30fz0abq4m.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ccs2x7j30da038glj.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cd8i32j3063029a9z.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02cdm3goj307s03sjre.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ce0h2yj30af03tq34.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02ceji72j318g0zkn1t.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EPUB内嵌入DIY字体">
-<meta name="twitter:description" content="矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。
-制作字体
-首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。
-
-
-
-打开PS制作你需要的图像，最后保存成PNG。
-
-
-
-打开Font Creator，新建工程 名字随意">
+  
+    <meta property="og:image" content="undefined"/>
+  
 
   
     <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
   
   
- <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="/favicon.png" rel="icon">
   
-  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
-
-  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
   
 
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
-    <div class="collapse navbar-collapse nav-menu">
-      <ul class="nav navbar-nav">
-      
-        <li>
-          <a href="/archives">
-            <i class="fa fa-archive"></i>
-            Archives
-          </a>
-        </li>
-      
-        <li>
-          <a href="/categories">
-            <i class="fa fa-folder"></i>
-            Categories
-          </a>
-        </li>
-      
-        <li>
-          <a href="/tags">
-            <i class="fa fa-tags"></i>
-            Tags
-          </a>
-        </li>
-      
-        <li>
-          <a href="/wiki">
-            <i class="fa fa-book"></i>
-            Wiki
-          </a>
-        </li>
-      
-        <li>
-          <a href="/about">
-            <i class="fa fa-user"></i>
-            About
-          </a>
-        </li>
-      
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-          <li><a id="rss-link" href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
 </nav>
 <div class="clearfix"></div>
 
-      <div id='content' class="container">
+  <div class="container">
+  	<div class="content">
+    	 
 
-        <div class="page-header-wrapper">
-          <!--[if lt IE 9]><div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>提示:</strong>您的浏览器版本太低了,建议升级到 <strong><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="IE9">IE9</a></strong> 以上,本站使用<a href="https://www.google.com/intl/zh-CN/chrome/">Chrome浏览器</a>可以获得最好的显示效果.</div><![endif]-->
-          <div class="page-header">
-            <h1 class="title">
-          
-            EPUB内嵌入DIY字体
-          
-            </h1>
-        </div>
-      </div>
-      
-      <section id="main"
-        
-      ><article id="post-e02wymtwm3qurcwn" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
 
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div id="toc"><span class="toc-header">Contents</span><ol class="article-toc"><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#制作字体"><span class="article-toc-text">制作字体</span></a></li><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#内嵌字体到epub"><span class="article-toc-text">内嵌字体到epub</span></a></li><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#兼容苹果方法"><span class="article-toc-text">兼容苹果方法</span></a></li><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#效果参考"><span class="article-toc-text">效果参考</span></a></li></ol></div><p>矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。</p>
-<h2 id="制作字体">制作字体</h2><ul>
+	
+		<div class="page-header">		
+			<h1> EPUB内嵌入DIY字体</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <p>矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。</p>
+<h2 id="制作字体">制作字体</h2>
+<ul>
 <li>首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）。</li>
 </ul>
 <p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02c99jnqj30fy04jwez.jpg" alt="软件"></p>
@@ -197,7 +143,8 @@
 </ul>
 <p><img src="http://ww1.sinaimg.cn/mw690/005xAU1Stw1en02ccgjiej30fz0abq4m.jpg" alt="epub内嵌字体"></p>
 <p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ccs2x7j30da038glj.jpg" alt="epub内嵌字体"></p>
-<h2 id="内嵌字体到epub">内嵌字体到epub</h2><ul>
+<h2 id="内嵌字体到epub">内嵌字体到epub</h2>
+<ul>
 <li>打开sigil对着资源管理器的fonts文件夹右键添加字体</li>
 </ul>
 <p><img src="http://ww4.sinaimg.cn/mw690/005xAU1Stw1en02cd8i32j3063029a9z.jpg" alt="epub内嵌字体"></p>
@@ -205,7 +152,8 @@
 <li>CSS这样写</li>
 </ul>
 <p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02cdm3goj307s03sjre.jpg" alt="epub内嵌字体"></p>
-<h2 id="兼容苹果方法">兼容苹果方法</h2><ul>
+<h2 id="兼容苹果方法">兼容苹果方法</h2>
+<ul>
 <li>新建txt，内容为</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">display_options</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">platform</span> <span class="attribute">name</span>=<span class="value">"*"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">option</span> <span class="attribute">name</span>=<span class="value">"specified-fonts"</span>&gt;</span>true<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">platform</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">display_options</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -217,120 +165,133 @@
 </li>
 </ul>
 <p><img src="http://ww3.sinaimg.cn/mw690/005xAU1Stw1en02ce0h2yj30af03tq34.jpg" alt="epub内嵌字体"></p>
-<h2 id="效果参考">效果参考</h2><p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02ceji72j318g0zkn1t.jpg" alt="epub内嵌字体"></p>
+<h2 id="效果参考">效果参考</h2>
+<p><img src="http://ww2.sinaimg.cn/mw690/005xAU1Stw1en02ceji72j318g0zkn1t.jpg" alt="epub内嵌字体"></p>
+	  
+	</div>
 
-      
-    </div>
-  </div>
-</article>
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/12/07/zyhw08/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/12/05/zyhw06/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+<h2 class="title">评论</h2>
+
+<div class="ds-thread" data-title="EPUB内嵌入DIY字体"></div>
 
 </section>
-        
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	12月 6 2014 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
           
-<aside id="sidebar">
+  <li>
+    <li><a href="/categories/技术/">技术<span>7</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 Zyhw
   
-    
-      
-<div class="widget-wrap center">
-  <ul class="pagination">
-    <li>
-      
-        <a href="/2014/12/07/zyhw08/" class="nav-prev">Prev</a>
-      
-    </li>
-    <li>
-      <a data-url="http://z.26ji.com/2014/12/06/zyhw07/" data-id="e02wymtwm3qurcwn" data_title="EPUB内嵌入DIY字体"
-        data_summary="矢量字符相比图像文件有着体积和易用等优势，是美化排版的选择之一。
-制作字体
-首先是安装Photo Shop（其他图像制作处理软件也行）和Font Creator（我使用的7.5，百度即可）..." class="article-share-link">Share</a>
-    </li>
-    <li>
-      
-        <a href="/2014/12/05/zyhw06/" class="nav-next">Next</a>
-      
-    </li>
-  </ul>
-</div>
-
-
-    
-      <div class="widget-wrap">
-  <div class="post-widget">
-    <i class="fa fa-clock-o"></i>
-    <time datetime="2014-12-06T09:19:48.000Z" itemprop="datePublished">12月 6 2014</time>
-  </div>
-</div>
-
-    
-      
-  <div class="widget-wrap">
-    <div class="post-widget">
-      <i class="fa fa-folder"></i>
-      <a class="category-link" href="/categories/技术/">技术<span class="category-count">7</span></a>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap">
-    <div class="post-widget">
-      <i class="fa fa-tags"></i>
-      <a class="tag-link" href="/tags/EPUB/">EPUB<span class="tag-count">1</span></a>
-    </div>
-  </div>
-
-
-    
+</p> </footer>
+</div> <!-- container-narrow -->
   
-</aside>
 
-
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer container">
-    <div id="footer-info" class="inner">
-      <a href="/">Zyhw</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
-    </div>
-  </div>
-</footer>
 <a id="gotop" href="#">
-  <i class="fa fa-chevron-up"></i>
+    <span><i class="fa fa-chevron-up"></i></span>
 </a>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="[object Object]" class="mobile-nav-link">0</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">1</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">2</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">3</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">4</a>
-  
-</nav>
 
-    
-
-<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'zyhw' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
-<script src="/js/jquery.fitvids.js" type="text/javascript"></script>
 
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-
-<script src="/js/script.js" type="text/javascript"></script>
-
-
-  </div>
 </body>
-</html>
+   </html>

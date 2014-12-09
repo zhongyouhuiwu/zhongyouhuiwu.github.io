@@ -1,157 +1,112 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>emeditor利用书签提取小说标题 | Zyhw&#39;Blog</title>
+  <meta name="author" content="Zyhw">
+  
+  <meta name="description" content="rouhezi.com">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、首先查找符合条件的字符串。
-利用正则第.*[卷章]查找到卷章。
 
-123456789101112131415第一卷第一章 标题    我是一个段落	第二章 标题	我是一个段落第二卷 标题第三章 标题	我是一个段落第四章 标题	我是一个段落第五章 标题	我是一个段落第六章 标题	我是一个段落
+  <meta property="og:title" content="emeditor利用书签提取小说标题"/>
+  <meta property="og:site_name" content="Zyhw&#39;Blog"/>
 
-
-全部设为书签，如下图：
   
-
-
-二、提取出来符合条件的字符串
-文档右键-》书签-》当前文档-》提取">
-<meta property="og:type" content="article">
-<meta property="og:title" content="emeditor利用书签提取小说标题">
-<meta property="og:url" content="http://z.26ji.com/2014/12/05/zyhw06/">
-<meta property="og:site_name" content="Zyhw'Blog">
-<meta property="og:description" content="一、首先查找符合条件的字符串。
-利用正则第.*[卷章]查找到卷章。
-
-123456789101112131415第一卷第一章 标题    我是一个段落	第二章 标题	我是一个段落第二卷 标题第三章 标题	我是一个段落第四章 标题	我是一个段落第五章 标题	我是一个段落第六章 标题	我是一个段落
-
-
-全部设为书签，如下图：
+    <meta property="og:image" content="undefined"/>
   
-
-
-二、提取出来符合条件的字符串
-文档右键-》书签-》当前文档-》提取">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/005xAU1Stw1emyurpmqpnj30gj0d9tau.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005xAU1Stw1emyurq3wzhj30h409r3zu.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="emeditor利用书签提取小说标题">
-<meta name="twitter:description" content="一、首先查找符合条件的字符串。
-利用正则第.*[卷章]查找到卷章。
-
-123456789101112131415第一卷第一章 标题    我是一个段落	第二章 标题	我是一个段落第二卷 标题第三章 标题	我是一个段落第四章 标题	我是一个段落第五章 标题	我是一个段落第六章 标题	我是一个段落
-
-
-全部设为书签，如下图：
-  
-
-
-二、提取出来符合条件的字符串
-文档右键-》书签-》当前文档-》提取">
 
   
     <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
   
   
- <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="/favicon.png" rel="icon">
   
-  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
-
-  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
   
 
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
-    <div class="collapse navbar-collapse nav-menu">
-      <ul class="nav navbar-nav">
-      
-        <li>
-          <a href="/archives">
-            <i class="fa fa-archive"></i>
-            Archives
-          </a>
-        </li>
-      
-        <li>
-          <a href="/categories">
-            <i class="fa fa-folder"></i>
-            Categories
-          </a>
-        </li>
-      
-        <li>
-          <a href="/tags">
-            <i class="fa fa-tags"></i>
-            Tags
-          </a>
-        </li>
-      
-        <li>
-          <a href="/wiki">
-            <i class="fa fa-book"></i>
-            Wiki
-          </a>
-        </li>
-      
-        <li>
-          <a href="/about">
-            <i class="fa fa-user"></i>
-            About
-          </a>
-        </li>
-      
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-          <li><a id="rss-link" href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
 </nav>
 <div class="clearfix"></div>
 
-      <div id='content' class="container">
+  <div class="container">
+  	<div class="content">
+    	 
 
-        <div class="page-header-wrapper">
-          <!--[if lt IE 9]><div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>提示:</strong>您的浏览器版本太低了,建议升级到 <strong><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="IE9">IE9</a></strong> 以上,本站使用<a href="https://www.google.com/intl/zh-CN/chrome/">Chrome浏览器</a>可以获得最好的显示效果.</div><![endif]-->
-          <div class="page-header">
-            <h1 class="title">
-          
-            emeditor利用书签提取小说标题
-          
-            </h1>
-        </div>
-      </div>
-      
-      <section id="main"
-        
-      ><article id="post-d6dt3h5nb0p35uc6" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
 
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div id="toc"><span class="toc-header">Contents</span><ol class="article-toc"><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#一、首先查找符合条件的字符串。"><span class="article-toc-text">一、首先查找符合条件的字符串。</span></a></li><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#二、提取出来符合条件的字符串"><span class="article-toc-text">二、提取出来符合条件的字符串</span></a></li><li class="article-toc-item article-toc-level-2"><a class="article-toc-link" href="#三、在二中可以反转书签，得到相反的内容。"><span class="article-toc-text">三、在二中可以反转书签，得到相反的内容。</span></a></li></ol></div><h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2><ul>
+	
+		<div class="page-header">		
+			<h1> emeditor利用书签提取小说标题</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2>
+<ul>
 <li>利用正则<code>第.*[卷章]</code>查找到卷章。</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">    我是一个段落</div><div class="line">	</div><div class="line">第二章 标题</div><div class="line">	我是一个段落</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">	我是一个段落</div><div class="line">第四章 标题</div><div class="line">	我是一个段落</div><div class="line">第五章 标题</div><div class="line">	我是一个段落</div><div class="line">第六章 标题</div><div class="line">	我是一个段落</div></pre></td></tr></table></figure>
@@ -161,7 +116,8 @@
 <p>  <img src="http://ww2.sinaimg.cn/large/005xAU1Stw1emyurpmqpnj30gj0d9tau.jpg" alt="设为书签"></p>
 </li>
 </ul>
-<h2 id="二、提取出来符合条件的字符串">二、提取出来符合条件的字符串</h2><ul>
+<h2 id="二、提取出来符合条件的字符串">二、提取出来符合条件的字符串</h2>
+<ul>
 <li><p>文档右键-》书签-》当前文档-》提取以添加书签的行到新文件，如下图：</p>
 <p>  <img src="http://ww1.sinaimg.cn/large/005xAU1Stw1emyurq3wzhj30h409r3zu.jpg" alt="提取书签"></p>
 </li>
@@ -171,119 +127,131 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">第二章 标题</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">第四章 标题</div><div class="line">第五章 标题</div><div class="line">第六章 标题</div></pre></td></tr></table></figure>
 
 <h2 id="三、在二中可以反转书签，得到相反的内容。">三、在二中可以反转书签，得到相反的内容。</h2>
-      
-    </div>
-  </div>
-</article>
+	  
+	</div>
 
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/12/06/zyhw07/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/11/28/zyhw05/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+<h2 class="title">评论</h2>
+
+<div class="ds-thread" data-title="emeditor利用书签提取小说标题"></div>
 
 </section>
-        
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	12月 5 2014 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
           
-<aside id="sidebar">
+  <li>
+    <li><a href="/categories/工具/">工具<span>4</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/emeditor/">emeditor<span>1</span></a></li> <li><a href="/tags/txt/">txt<span>2</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 Zyhw
   
-    
-      
-<div class="widget-wrap center">
-  <ul class="pagination">
-    <li>
-      
-        <a href="/2014/12/06/zyhw07/" class="nav-prev">Prev</a>
-      
-    </li>
-    <li>
-      <a data-url="http://z.26ji.com/2014/12/05/zyhw06/" data-id="d6dt3h5nb0p35uc6" data_title="emeditor利用书签提取小说标题"
-        data_summary="一、首先查找符合条件的字符串。
-利用正则第.*[卷章]查找到卷章。
-
-123456789101112131415第一卷第一章 标题    我是一个段落	第二章 标题	我是一个段落第二卷 标题第三章 ..." class="article-share-link">Share</a>
-    </li>
-    <li>
-      
-        <a href="/2014/11/28/zyhw05/" class="nav-next">Next</a>
-      
-    </li>
-  </ul>
-</div>
-
-
-    
-      <div class="widget-wrap">
-  <div class="post-widget">
-    <i class="fa fa-clock-o"></i>
-    <time datetime="2014-12-05T08:05:00.000Z" itemprop="datePublished">12月 5 2014</time>
-  </div>
-</div>
-
-    
-      
-  <div class="widget-wrap">
-    <div class="post-widget">
-      <i class="fa fa-folder"></i>
-      <a class="category-link" href="/categories/工具/">工具<span class="category-count">4</span></a>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap">
-    <div class="post-widget">
-      <i class="fa fa-tags"></i>
-      <a class="tag-link" href="/tags/emeditor/">emeditor<span class="tag-count">1</span></a><a class="tag-link" href="/tags/txt/">txt<span class="tag-count">2</span></a>
-    </div>
-  </div>
-
-
-    
+</p> </footer>
+</div> <!-- container-narrow -->
   
-</aside>
 
-
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer container">
-    <div id="footer-info" class="inner">
-      <a href="/">Zyhw</a> &copy; 2014 Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/seff/nut" target="_blank">Nut</a>
-    </div>
-  </div>
-</footer>
 <a id="gotop" href="#">
-  <i class="fa fa-chevron-up"></i>
+    <span><i class="fa fa-chevron-up"></i></span>
 </a>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="[object Object]" class="mobile-nav-link">0</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">1</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">2</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">3</a>
-  
-    <a href="[object Object]" class="mobile-nav-link">4</a>
-  
-</nav>
 
-    
-
-<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'zyhw' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
-<script src="/js/jquery.fitvids.js" type="text/javascript"></script>
 
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-
-<script src="/js/script.js" type="text/javascript"></script>
-
-
-  </div>
 </body>
-</html>
+   </html>
