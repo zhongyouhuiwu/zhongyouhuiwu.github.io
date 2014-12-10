@@ -27,7 +27,7 @@
 body {
   position: relative;
   padding-top: 40px;
-  background-color: #fff;
+  background-color: #EEEEEE;
   background-repeat: repeat-x;
   background-position: 0 40px;
   padding-bottom: 70px;
@@ -165,12 +165,12 @@ li i {
 }
 .tag_box a:hover {
   background-color:#397bdd;
-  color:#FFF;
+  color:#EEEEEE;
 }
 .tag_box a.active {
   background:#57A957;
   border:1px solid #4C964D;
-  color:#FFF;
+  color:#EEEEEE;
 }
 
 .widget {
@@ -223,7 +223,7 @@ a.label-anchor:hover {
 a.label-anchor span {
   font-weight: bold;
   line-height: 0px;
-  color: #ffffff;
+  color: #EEEEEEEEEEEE;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   background-color: #666;
@@ -247,9 +247,9 @@ a.inline-ref:hover {
    ========================================================================== */
 
 blockquote {
-  border-left:5px solid #cccccc;
+  border-left:5px solid #49B7E2;
   font-size: 1em;
-  background-color: #fff;
+  background-color: #EEEEEE;
 }
 
 blockquote p, blockquote ol, blockquote ul, blockquote li, .slogan{
@@ -397,10 +397,18 @@ h4 {
   position:relative;
   padding: 2px 5px 5px 5px;
   border-top:3px solid #ccc;
+  background-color: #e5e5e5;
+  
+
+
+/*  position:relative;
+  padding: 2px 5px 5px 5px;
+  border-top:3px solid #ccc;
   font-size: 1.9em;
   font-weight: normal;
   font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
   background-color: #e5e5e5;
+  */
 }
 
 .page h3.title a {
