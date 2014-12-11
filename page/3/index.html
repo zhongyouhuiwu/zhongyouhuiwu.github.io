@@ -108,6 +108,45 @@
 	
 	<!-- display as entry -->
 		<h3 class="title">
+			<a href="/2014/10/30/zyhw01/" title="变化很快,需要结合实际情况设置.">github绑定域名介绍</a>
+			<span class="date"> 10月 30日,2014 </span>
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-8">
+	
+	
+	  <h2 id="主域名绑定">主域名绑定</h2>
+<ul>
+<li><p>在域名dns控制台，设置主机记录@，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名）</p>
+</li>
+<li><p>在你所建<code>repositories</code>中，新建一个文件<code>CNAME</code>，无后缀，文件中写出你要绑定的域名xx.com(xx根据自己情况修改)。然后查看<code>repositories</code>的<code>setting</code>中有<code>Your site is published at http://xx.com</code>(xx根据自己情况修改)，说明cname是成功的。等待一段时间就可以直接用域名访问了。</p>
+</li>
+</ul>
+<h2 id="二级域名绑定">二级域名绑定</h2>
+<ul>
+<li>设置主机记录github，类型A，到IP 192.30.252.153（可以直接ping分配给的二级域名,这个主机记录可以随便写，只要保持一致就行）
+	
+	</div>
+	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/10/30/zyhw01/"><img src="http://ww2.sinaimg.cn/mw690/04c1a269tw1en5ljbp9wtj204g04g0sk.jpg" alt="github绑定域名介绍"  class="nofancybox"></a></div>
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2014/10/30/zyhw01/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+		<h3 class="title">
 			<a href="/2014/10/29/2014102901/" title="Hexo博客自定义内容设置修改等.">Hexo部署成功后续问题</a>
 			<span class="date"> 10月 29日,2014 </span>
 		</h3>
@@ -255,54 +294,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->
-		<h3 class="title">
-			<a href="/2014/10/24/20141024-1/" title="hexo自身生成文档.">Markdown本身标准</a>
-			<span class="date"> 10月 24日,2014 </span>
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-8">
-	
-	
-	  <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-	
-	</div>
-	
-	<div class="col-md-4">
-	  <div class="thumbnail"><a href="/2014/10/24/20141024-1/"><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1en5ljc6c9ij2069069wec.jpg" alt="Markdown本身标准"  class="nofancybox"></a></div>
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2014/10/24/20141024-1/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
 
 		</div>
 
@@ -319,7 +310,7 @@
         <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
 		
-          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/page/4/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -349,7 +340,7 @@
 		<h4>分类</h4>
 		<ul class="entry">
 		
-			<li><a href="/categories/Hexo博客/">Hexo博客<span> <i class="fa fa-angle-left"></i>5</span></a><i class="fa fa-angle-right"></i></li>
+			<li><a href="/categories/Hexo博客/">Hexo博客<span> <i class="fa fa-angle-left"></i>6</span></a><i class="fa fa-angle-right"></i></li>
 		
 			<li><a href="/categories/电脑技术/">电脑技术<span> <i class="fa fa-angle-left"></i>6</span></a><i class="fa fa-angle-right"></i></li>
 		
@@ -364,25 +355,25 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
+		
 			<li><a href="/tags/Hexo/">Hexo<span>4</span></a></li>
 		
 			<li><a href="/tags/stylish/">stylish<span>1</span></a></li>
 		
-			<li><a href="/tags/github/">github<span>3</span></a></li>
-		
-			<li><a href="/tags/Markdown/">Markdown<span>3</span></a></li>
+			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
 		
 			<li><a href="/tags/emeditor/">emeditor<span>1</span></a></li>
 		
-			<li><a href="/tags/txt/">txt<span>1</span></a></li>
-		
 			<li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
 		
-			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
+			<li><a href="/tags/github/">github<span>4</span></a></li>
+		
+			<li><a href="/tags/txt/">txt<span>1</span></a></li>
+		
+			<li><a href="/tags/Markdown/">Markdown<span>3</span></a></li>
 		
 			<li><a href="/tags/Photoshop/">Photoshop<span>1</span></a></li>
-		
-			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -394,6 +385,10 @@
 <div class="widget">
   <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2014/12/11/git-jiaocheng/"  title="记录一下，以备后用." ><i class="fa fa-file-o"></i>Git入门教程</a>
+      </li>
     
       <li>
         <a href="/2014/12/11/hexo-freemind-tag-plugins/"  title="freemind主题的tag和plugins用法." ><i class="fa fa-file-o"></i>Hexo博客Freemind主题一些规则</a>
@@ -409,10 +404,6 @@
     
       <li>
         <a href="/2014/12/05/zyhw06/"  title="可以在制作电子书时先提取出来看看标题有错没." ><i class="fa fa-file-o"></i>emeditor利用书签提取小说标题</a>
-      </li>
-    
-      <li>
-        <a href="/2014/11/28/zyhw05/" ><i class="fa fa-file-o"></i>pureftpd安装-Error</a>
       </li>
     
   </ul>
