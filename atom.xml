@@ -4,7 +4,7 @@
   <subtitle><![CDATA[肉合子-rouhezi.com]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://rouhezi.com/"/>
-  <updated>2014-12-11T05:00:17.441Z</updated>
+  <updated>2014-12-11T08:21:36.141Z</updated>
   <id>http://rouhezi.com/</id>
   
   <author>
@@ -519,7 +519,7 @@
     <link href="http://rouhezi.com/2014/10/29/2014102901/"/>
     <id>http://rouhezi.com/2014/10/29/2014102901/</id>
     <published>2014-10-29T09:48:03.000Z</published>
-    <updated>2014-12-11T04:52:36.000Z</updated>
+    <updated>2014-12-11T05:02:16.000Z</updated>
     <content type="html"><![CDATA[<p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
 <h3 id="添加RSS">添加RSS</h3>
 <p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
@@ -535,7 +535,7 @@
 <p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
 <p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
 <h3 id="添加sitemap">添加sitemap</h3>
-<p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
+<p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。<br><a id="more"></a></p>
 <ul>
 <li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
 <li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>

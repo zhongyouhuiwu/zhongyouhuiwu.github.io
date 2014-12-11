@@ -135,36 +135,7 @@
 <p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
 <p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
 <h3 id="添加sitemap">添加sitemap</h3>
-<p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
-<ul>
-<li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
-<li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-sitemap</div></pre></td></tr></table></figure>
-
-<p>访问<code>127.0.0.1:4000/sitemap.xml</code>即可看到站点地图。不过，sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。</p>
-<h3 id="插入本地图片">插入本地图片</h3>
-<p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。<br>使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
-<h3 id="bug:「warning:_LF_will_be_replaced_by_CRLF」">bug:「warning: LF will be replaced by CRLF」</h3>
-<p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
-<ul>
-<li>切换到博客的根目录，执行如下命令：<code>git config --global core.autocrlf false</code></li>
-<li>删除掉该目录下的<code>.git</code>文件夹（可能是隐藏的），命令：<code>rm -rf .git</code></li>
-<li>重新<code>git init</code>。</li>
-</ul>
-<p>再deploy试试吧，清新脱俗了。</p>
-<h3 id="bug:hexo_deploy没反应">bug:<code>hexo deploy</code>没反应</h3>
-<p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
-<h3 id="bug:hexo_update_-g升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h3>
-<p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
-<h3 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h3>
-<p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
-<p>打开根目录下的config文件，第15行，<code>url:</code>，自觉填上吧。</p>
-<h3 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h3>
-<p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
-<h3 id="修改_config-yml">修改<code>_config.yml</code></h3>
-<p>所以参数都需要空格然后再设置数据</p>
-
+<p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。<br>
 	
 	</div>
 	
@@ -393,25 +364,25 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>4</span></a></li>
-		
-			<li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
-		
-			<li><a href="/tags/emeditor/">emeditor<span>1</span></a></li>
-		
 			<li><a href="/tags/github/">github<span>3</span></a></li>
 		
 			<li><a href="/tags/Markdown/">Markdown<span>3</span></a></li>
 		
 			<li><a href="/tags/Photoshop/">Photoshop<span>1</span></a></li>
 		
+			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
+		
+			<li><a href="/tags/emeditor/">emeditor<span>1</span></a></li>
+		
 			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
+		
+			<li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>4</span></a></li>
 		
 			<li><a href="/tags/stylish/">stylish<span>1</span></a></li>
 		
 			<li><a href="/tags/txt/">txt<span>1</span></a></li>
-		
-			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
 		
 		 
 		</ul>
