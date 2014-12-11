@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo博客Freemind主题一些规则 | Zyhw&#39;s Blog</title>
+  <meta name="author" content="Zyhw">
+  
+  <meta name="description" content="freemind主题的tag和plugins用法.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Hexo博客Freemind主题一些规则"/>
+  <meta property="og:site_name" content="Zyhw&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Zyhw&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Hexo博客Freemind主题一些规则</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+	
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>freemind主题的tag和plugins用法.</p>
+			
+		</div> <!-- alert -->
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <p>Freemind 主题提供了丰富的 tag plugins，以充分利用 Bootstrap 的威力。</p>
+<p>在使用这些 tag plugins 之前，你需要先安装<code>hexo-tag-bootstrap</code> 。在你的 Hexo 博客目录，执行下列命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-tag-bootstrap <span class="comment">--save</span></span></div></pre></td></tr></table></figure>
+
+<p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p>
+<a id="more"></a>
+
+<h2 id="文本颜色">文本颜色</h2>
+<p>插入一段文本，并用特殊的颜色高亮它。</p>
+<h3 id="语法">语法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">{% textcolor [style] <span class="variable">%}</span></div><div class="line">  <span class="keyword">text</span> <span class="keyword">string</span></div><div class="line">{% endtextcolor <span class="variable">%}</span></div></pre></td></tr></table></figure>
+
+<h3 id="示例">示例</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">{% textcolor muted <span class="variable">%}</span>Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{% endtextcolor <span class="variable">%}</span></div><div class="line"></div><div class="line">{% textcolor primary <span class="variable">%}</span>Nullam id dolor id nibh ultricies vehicula ut id elit.{% endtextcolor <span class="variable">%}</span></div><div class="line"></div><div class="line">{% textcolor success <span class="variable">%}</span>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{% endtextcolor <span class="variable">%}</span></div><div class="line"></div><div class="line">{% textcolor info <span class="variable">%}</span>Maecenas sed diam eget risus varius blandit sit amet non magna.{% endtextcolor <span class="variable">%}</span></div><div class="line"></div><div class="line">{% textcolor <span class="keyword">warning</span> <span class="variable">%}</span>Etiam porta sem malesuada magna mollis euismod.{% endtextcolor <span class="variable">%}</span></div><div class="line"></div><div class="line">{% textcolor danger <span class="variable">%}</span>Donec ullamcorper nulla non metus auctor fringilla.{% endtextcolor <span class="variable">%}</span></div></pre></td></tr></table></figure>
+
+<h3 id="结果">结果</h3>
+<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<h2 id="按钮（Buttons）">按钮（Buttons）</h2>
+<p>插入一个按钮，按钮可以带有链接、文本，并可以指定样式。</p>
+<h3 id="语法-1">语法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template_tag">{% btn <span class="keyword">url</span> text [style] %}</span><span class="xml"></span></div></pre></td></tr></table></figure>
+
+<h3 id="示例-1">示例</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">{% btn http:<span class="comment">//rouhezi.com rouhezi %}</span></div><div class="line"></div><div class="line">{% btn http:<span class="comment">//rouhezi.com rouhezi primary %}</span></div><div class="line"></div><div class="line">{% btn http:<span class="comment">//rouhezi.com rouhezi success %}</span></div><div class="line"></div><div class="line">{% btn http:<span class="comment">//rouhezi.com rouhezi warning %}</span></div><div class="line"></div><div class="line">{% btn http:<span class="comment">//rouhezi.com rouhezi danger %}</span></div><div class="line"></div><div class="line">{% btn http:<span class="comment">//rouhezi.com rouhezi info %}</span></div></pre></td></tr></table></figure>
+
+<h3 id="结果-1">结果</h3>
+<a class="btn btn-default" href="http://rouhezi.com" target="_blank" rel="external">rouhezi</a>
+
+<a class="btn btn-primary" href="http://rouhezi.com" target="_blank" rel="external">rouhezi</a>
+
+<a class="btn btn-success" href="http://rouhezi.com" target="_blank" rel="external">rouhezi</a>
+
+<a class="btn btn-warning" href="http://rouhezi.com" target="_blank" rel="external">rouhezi</a>
+
+<a class="btn btn-danger" href="http://rouhezi.com" target="_blank" rel="external">rouhezi</a>
+
+<a class="btn btn-info" href="http://rouhezi.com" target="_blank" rel="external">rouhezi</a>
+
+<h2 id="标签（Labels）">标签（Labels）</h2>
+<p>插入一个标签，并为其指定文本和样式。</p>
+<h3 id="语法-2">语法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">{% label <span class="keyword">text</span> [style] <span class="variable">%}</span></div></pre></td></tr></table></figure>
+
+<h3 id="示例-2">示例</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">{% label <span class="keyword">default</span> <span class="variable">%}</span></div><div class="line"></div><div class="line">{% label warinng <span class="keyword">warning</span> <span class="variable">%}</span></div><div class="line"></div><div class="line">{% label success success <span class="variable">%}</span></div><div class="line"></div><div class="line">{% label danger danger <span class="variable">%}</span></div><div class="line"></div><div class="line">{% label primary primary <span class="variable">%}</span></div><div class="line"></div><div class="line">{% label info info <span class="variable">%}</span></div></pre></td></tr></table></figure>
+
+<h3 id="结果-2">结果</h3>
+<span class="label label-default">default</span>
+
+<span class="label label-warning">warinng</span>
+
+<span class="label label-success">success</span>
+
+<span class="label label-danger">danger</span>
+
+<span class="label label-primary">primary</span>
+
+<span class="label label-info">info</span>
+
+<h2 id="徽章（Badges）">徽章（Badges）</h2>
+<p>插入一个徽章，并为其指定文本。</p>
+<div class="alert alert-danger"><i class="fa fa-bug"></i>  <p>徽章在 Internet Explorer 8 中无法使用折叠特效，因为它不支持 <code>:empty</code> 选择器。</p>
+</div>
+
+<h3 id="语法-3">语法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">{% badge <span class="keyword">text</span> <span class="variable">%}</span></div></pre></td></tr></table></figure>
+
+<h3 id="示例-3">示例</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tuple">{<span class="comment">% badge 42 %}</span></span></div></pre></td></tr></table></figure>
+
+<h3 id="结果-3">结果</h3>
+<span class="badge">42</span>
+
+<h2 id="警报（Alerts）">警报（Alerts）</h2>
+<p>插入一段警报文本信息，并为其指定样式。</p>
+<h3 id="语法-4">语法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">{% alert [style] <span class="variable">%}</span></div><div class="line">   Alert <span class="keyword">string</span></div><div class="line">{% endalert <span class="variable">%}</span></div></pre></td></tr></table></figure>
+
+<h3 id="示例-4">示例</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">{<span class="var_expand">% alert warning %</span>}Best check yo self, you're <span class="literal">not</span> looking too good.{<span class="var_expand">% endalert %</span>}</div><div class="line"></div><div class="line">{<span class="var_expand">% alert danger %</span>}Change <span class="literal">a</span> few things up <span class="literal">and</span> try submitting again.{<span class="var_expand">% endalert %</span>}</div><div class="line"></div><div class="line">{<span class="var_expand">% alert success %</span>}You successfully read this important alert message.{<span class="var_expand">% endalert %</span>}</div><div class="line"></div><div class="line">{<span class="var_expand">% alert info %</span>}This alert needs your attention, but it's <span class="literal">not</span> super important.{<span class="var_expand">% endalert %</span>}</div></pre></td></tr></table></figure>
+
+<h3 id="结果-4">结果</h3>
+<div class="alert alert-warning"><i class="fa fa-bell"></i>  <p>Best check yo self, you’re not looking too good.</p>
+</div>
+
+<div class="alert alert-danger"><i class="fa fa-bug"></i>  <p>Change a few things up and try submitting again.</p>
+</div>
+
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  <p>You successfully read this important alert message.</p>
+</div>
+
+<div class="alert alert-info"><i class="fa fa-info"></i>  <p>This alert needs your attention, but it’s not super important.</p>
+</div>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/12/07/zyhw08/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+<h2 class="title">评论</h2>
+
+<div class="ds-thread" data-title="Hexo博客Freemind主题一些规则"></div>
+
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	12月 11日,2014 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Hexo博客/">Hexo博客<span>5</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Hexo/">Hexo<span>4</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#文本颜色"><span class="toc-article-text">文本颜色</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#语法"><span class="toc-article-text">语法</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#示例"><span class="toc-article-text">示例</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#结果"><span class="toc-article-text">结果</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#按钮（Buttons）"><span class="toc-article-text">按钮（Buttons）</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#语法-1"><span class="toc-article-text">语法</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#示例-1"><span class="toc-article-text">示例</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#结果-1"><span class="toc-article-text">结果</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#标签（Labels）"><span class="toc-article-text">标签（Labels）</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#语法-2"><span class="toc-article-text">语法</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#示例-2"><span class="toc-article-text">示例</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#结果-2"><span class="toc-article-text">结果</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#徽章（Badges）"><span class="toc-article-text">徽章（Badges）</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#语法-3"><span class="toc-article-text">语法</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#示例-3"><span class="toc-article-text">示例</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#结果-3"><span class="toc-article-text">结果</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#警报（Alerts）"><span class="toc-article-text">警报（Alerts）</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#语法-4"><span class="toc-article-text">语法</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#示例-4"><span class="toc-article-text">示例</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#结果-4"><span class="toc-article-text">结果</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 Zyhw
+  
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+<a id="gotop" href="#">
+    <span><i class="fa fa-chevron-up"></i></span>
+</a>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'zyhw' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+   </html>

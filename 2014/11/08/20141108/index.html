@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>autohotkey快速输入文本内容 | Zyhw&#39;Blog</title>
+  <title>autohotkey快速输入文本内容 | Zyhw&#39;s Blog</title>
   <meta name="author" content="Zyhw">
   
-  <meta name="description" content="rouhezi.com">
+  <meta name="description" content="autohotkey在需要反复输入同样内容时的用法.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="autohotkey快速输入文本内容"/>
-  <meta property="og:site_name" content="Zyhw&#39;Blog"/>
+  <meta property="og:site_name" content="Zyhw&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   
-    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;s Blog" type="application/atom+xml">
   
   
-    <link href="/favicon.png" rel="icon">
+    <link href="/favicon.ico" rel="icon">
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
+	  <a class="navbar-brand" href="/">Zyhw&#39;s Blog</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -101,6 +101,11 @@
 	<div class="col-md-9">
 	
 
+	
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>autohotkey在需要反复输入同样内容时的用法.</p>
+			
+		</div> <!-- alert -->
 			
 
 	<!-- content -->
@@ -108,7 +113,7 @@
 	    <h2 id="定义多行文本内容快速输入">定义多行文本内容快速输入</h2>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">::chunsi::</span></div><div class="line">(</div><div class="line">《春思》【唐】李白</div><div class="line">燕草如碧丝，秦桑低绿枝。当君怀归日，</div><div class="line">是妾断肠时。春风不相识，何事入罗帏？</div><div class="line">)</div></pre></td></tr></table></figure>
 
-<p>上述代码保存为ahk，运行。然后输入chunsi空格键就会快速输入圆括号内的诗文。如果单行内容直接定义冒号后面就行，不需要圆括号。</p>
+<p>上述代码保存为ahk，运行。然后输入chunsi空格键就会快速输入圆括号内的诗文。如果单行内容直接定义冒号后面就行，不需要圆括号。<br><a id="more"></a></p>
 <h2 id="特殊字符的输入需要转义">特殊字符的输入需要转义</h2>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="pseudo">::a</span>::<span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">!}</span></span><span class="rules">{<span class="rule">^}</span></span></div></pre></td></tr></table></figure>
 
@@ -171,7 +176,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/工具/">工具<span>4</span></a></li>
+    <li><a href="/categories/软件工具/">软件工具<span>4</span></a></li>
   </li>
 
     </ul>
@@ -191,6 +196,11 @@
 
 	<!-- toc -->
 	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#定义多行文本内容快速输入"><span class="toc-article-text">定义多行文本内容快速输入</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#特殊字符的输入需要转义"><span class="toc-article-text">特殊字符的输入需要转义</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#转义顺序_(当重音符是转义符号时)"><span class="toc-article-text">转义顺序 (当重音符是转义符号时)</span></a></li></ol>
+		</div>
 	
 	</div>
 	

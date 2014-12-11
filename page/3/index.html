@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第 3 页 | Zyhw&#39;Blog</title>
+  <title>第 3 页 | Zyhw&#39;s Blog</title>
   <meta name="author" content="Zyhw">
   
   <meta name="description" content="rouhezi.com">
@@ -12,17 +12,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Zyhw&#39;Blog"/>
+  <meta property="og:site_name" content="Zyhw&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   
-    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;s Blog" type="application/atom+xml">
   
   
-    <link href="/favicon.png" rel="icon">
+    <link href="/favicon.ico" rel="icon">
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
+	  <a class="navbar-brand" href="/">Zyhw&#39;s Blog</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -108,7 +108,81 @@
 	
 	<!-- display as entry -->
 		<h3 class="title">
-			<a href="/2014/10/26/2014102601/" >Hexo博客tags有历史残留清除方法</a>
+			<a href="/2014/10/29/2014102901/" title="Hexo博客自定义内容设置修改等.">Hexo部署成功后续问题</a>
+			<span class="date"> 10月 29日,2014 </span>
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-8">
+	
+	
+	  <p>Hexo部署中以及成功后，过程中遇到的一些问题。</p>
+<h3 id="添加RSS">添加RSS</h3>
+<p>hexo提供了RSS的生成插件，需要手动安装和设置。步骤如下：</p>
+<ul>
+<li>安装RSS插件到本地：<code>npm install hexo-generator-feed</code></li>
+<li>开启RSS功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-feed</div></pre></td></tr></table></figure>
+
+<ul>
+<li>在站点添加链接：</li>
+</ul>
+<p>在<code>themes/light/_config.yml</code>中，编辑 <code>rss: /atom.xml</code></p>
+<p>在<code>themes/light/layout/_partial/header.ejs</code>中，<code>&lt;ul&gt;&lt;/ul&gt;</code>之间，添加一样代码<code>&lt;li&gt; &lt;a href=&quot;/atom.xml&quot;&gt;RSS&lt;/a&gt; &lt;/li&gt;</code></p>
+<h3 id="添加sitemap">添加sitemap</h3>
+<p>同样的，我们使用hexo提供的插件，方法与添加RSS类似。</p>
+<ul>
+<li>安装sitemap到本地：<code>npm install hexo-generator-sitemap</code></li>
+<li>开启sitemap功能：编辑<code>hexo/_config.yml</code>，添加如下代码：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plugin<span class="variable">s:</span></div><div class="line">- hexo-generator-sitemap</div></pre></td></tr></table></figure>
+
+<p>访问<code>127.0.0.1:4000/sitemap.xml</code>即可看到站点地图。不过，sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。</p>
+<h3 id="插入本地图片">插入本地图片</h3>
+<p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是本地链接地址怎么写。<br>使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</p>
+<h3 id="bug:「warning:_LF_will_be_replaced_by_CRLF」">bug:「warning: LF will be replaced by CRLF」</h3>
+<p>在hexo deploy时，有时会出现这个提示信息<code>warning: LF will be replaced by CRLF</code>，虽然看起来挺乱糟糟的，但不影响使用，可以忽略不计。若想不提示，可以使用如下方法：</p>
+<ul>
+<li>切换到博客的根目录，执行如下命令：<code>git config --global core.autocrlf false</code></li>
+<li>删除掉该目录下的<code>.git</code>文件夹（可能是隐藏的），命令：<code>rm -rf .git</code></li>
+<li>重新<code>git init</code>。</li>
+</ul>
+<p>再deploy试试吧，清新脱俗了。</p>
+<h3 id="bug:hexo_deploy没反应">bug:<code>hexo deploy</code>没反应</h3>
+<p>好多网友遇到过这个问题，目前来看，主要问题出在<code>config.yml</code>的d<code>eploy</code>配置上。注意缩进，同时注意冒号后面要有一个空格。</p>
+<h3 id="bug:hexo_update_-g升级错误，hexo命令失效">bug:<code>hexo update -g</code>升级错误，hexo命令失效</h3>
+<p>我升级时遇到了这个问题，原因不详。这种情况下，可执行<code>npm install -g hexo</code>重新安装一遍hexo，效果跟升级一样。</p>
+<h3 id="bug:搜索框进行搜索：没有结果">bug:搜索框进行搜索：没有结果</h3>
+<p>点击搜索后进入的google页面，搜索框里面是不是显示<code>「site:yoursite.com」</code>，这说明有个地方没有设置，请随我来：</p>
+<p>打开根目录下的config文件，第15行，<code>url:</code>，自觉填上吧。</p>
+<h3 id="bug:代码块中不显示行号">bug:代码块中不显示行号</h3>
+<p>hexo 的作者已经提示过了，使用四个空格的方式标志代码块的确没行号，需要行号的要使用反引号的方式。</p>
+<h3 id="修改_config-yml">修改<code>_config.yml</code></h3>
+<p>所以参数都需要空格然后再设置数据</p>
+
+	
+	</div>
+	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/10/29/2014102901/"><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1en5ljc6c9ij2069069wec.jpg" alt="Hexo部署成功后续问题"  class="nofancybox"></a></div>
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2014/10/29/2014102901/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+		<h3 class="title">
+			<a href="/2014/10/26/2014102601/" title="Hexo博客自定义内容设置修改等.">Hexo博客tags有历史残留清除方法</a>
 			<span class="date"> 10月 26日,2014 </span>
 		</h3>
 	
@@ -117,16 +191,21 @@
 			<div class="entry">
   <div class="row">
   
-	<div class="col-md-12">
-	  
+	<div class="col-md-8">
 	
-	  <p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
+	
+	  <p>2014.12.11修改:<br>可以使用<code>hexo clean</code>命令清除.</p>
+<p>Hexo博客在测试中，建立的一些测试文章时，会有tags和categories添加，测试结束，删除文章，但是tags等不会删除，还会残留在相关分类下。</p>
 <p>这时，需要删除博客所在主目录下的db.json，然后</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="title">Hexo</span> g</div><div class="line">Hexo d</div></pre></td></tr></table></figure>
 
 <p>至此，所有残留清除干净。</p>
 
 	
+	</div>
+	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/10/26/2014102601/"><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1en5ljc6c9ij2069069wec.jpg" alt="Hexo博客tags有历史残留清除方法"  class="nofancybox"></a></div>
 	</div>
 	
   
@@ -139,39 +218,7 @@
 	
 	<!-- display as entry -->
 		<h3 class="title">
-			<a href="/2014/10/25/2014102501/" >测试EverEdit中Markdown的模板可用性</a>
-			<span class="date"> 10月 25日,2014 </span>
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="我是用一级标题写的">我是用一级标题写的</h1>
-<blockquote>
-<p>一万年太久，只争朝夕。——毛泽东</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span> xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=<span class="string">"utf-8"</span> /&gt;</div><div class="line">	&lt;title&gt;New Document&lt;/title&gt;</div><div class="line">	&lt;meta name=<span class="string">"generator"</span> content=<span class="string">"EverEdit"</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"author"</span> content=<span class="string">""</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"keywords"</span> content=<span class="string">""</span> /&gt;</div><div class="line">	&lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span> /&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	hello world</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2014/10/25/2014102501/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-		<h3 class="title">
-			<a href="/2014/10/24/20141024-4/" >Markdown初学之标题与引用</a>
+			<a href="/2014/10/24/20141024-3/" title="Hexo中markdown初学.">Markdown初学之图片与超链接</a>
 			<span class="date"> 10月 24日,2014 </span>
 		</h3>
 	
@@ -180,53 +227,17 @@
 			<div class="entry">
   <div class="row">
   
-	<div class="col-md-12">
-	  
+	<div class="col-md-8">
 	
-	  <p><code>#这里是一级标题的写法</code></p>
-<h1 id="这里是一级标题">这里是一级标题</h1>
-<p><code>###这里是三级标题的写法</code></p>
-<h3 id="这里是三级标题">这里是三级标题</h3>
-<p><code>######这里是六级标题的写法，就到这里了，木有七级！</code></p>
-<h6 id="这里是六级标题，就到这里了，木有七级！">这里是六级标题，就到这里了，木有七级！</h6>
-<p><code>&gt; 引用内容，多行的话，用两个空格结尾吧。这里是引用的写法</code></p>
-<blockquote>
-<p>引用内容，多行的话，用两个空格结尾吧</p>
-</blockquote>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2014/10/24/20141024-4/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-		<h3 class="title">
-			<a href="/2014/10/24/20141024-3/" >Markdown初学之图片与超链接</a>
-			<span class="date"> 10月 24日,2014 </span>
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
 	
 	  <p>超链接的格式是方括号，里面是超链接名称，后面跟圆括号，里面是地址。如下<br><code>[我的博客](http://rouhezi.com)</code></p>
 <p>超级链接：<a href="http://rouhezi.com" target="_blank" rel="external">我的博客</a></p>
-<p>图片插入：感叹号，后面方括号，里面是候补文本，然后是圆括号，里面是图片地址</p>
-<p><code>![徐静蕾](http://entdata-pic.stor.vipsinaapp.com/2014082717/53fda8cf2efa1p2122983127.jpg)</code></p>
-<p><img src="http://entdata-pic.stor.vipsinaapp.com/2014082717/53fda8cf2efa1p2122983127.jpg" alt="徐静蕾"></p>
-<p>另外，markdown完全兼容html，你可以用html插入这些东西。</p>
-
+<p>
 	
+	</div>
+	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/10/24/20141024-3/"><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1en5ljc6c9ij2069069wec.jpg" alt="Markdown初学之图片与超链接"  class="nofancybox"></a></div>
 	</div>
 	
   
@@ -239,7 +250,7 @@
 	
 	<!-- display as entry -->
 		<h3 class="title">
-			<a href="/2014/10/24/20141024-2/" >Markdown初学之代码</a>
+			<a href="/2014/10/24/20141024-2/" title="hexoMarkdown初学之代码.">Markdown初学之代码</a>
 			<span class="date"> 10月 24日,2014 </span>
 		</h3>
 	
@@ -248,8 +259,8 @@
 			<div class="entry">
   <div class="row">
   
-	<div class="col-md-12">
-	  
+	<div class="col-md-8">
+	
 	
 	  <p>代码高亮显示，需要每行都空半角空格四个，另起一个段落给代码，段落代码是两个回车键。</p>
 <p>我是代码：</p>
@@ -263,9 +274,61 @@
 	
 	</div>
 	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/10/24/20141024-2/"><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1en5ljc6c9ij2069069wec.jpg" alt="Markdown初学之代码"  class="nofancybox"></a></div>
+	</div>
+	
   
 </div>
 	<a type="button" href="/2014/10/24/20141024-2/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+		<h3 class="title">
+			<a href="/2014/10/24/20141024-1/" title="hexo自身生成文档.">Markdown本身标准</a>
+			<span class="date"> 10月 24日,2014 </span>
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-8">
+	
+	
+	  <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+	
+	</div>
+	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/10/24/20141024-1/"><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1en5ljc6c9ij2069069wec.jpg" alt="Markdown本身标准"  class="nofancybox"></a></div>
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2014/10/24/20141024-1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -285,7 +348,7 @@
         <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
 		
-		   <li class="next"> <a href="/page/4/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
         
 	
 </ul>
@@ -315,13 +378,11 @@
 		<h4>分类</h4>
 		<ul class="entry">
 		
-			<li><a href="/categories/博客/">博客<span> <i class="fa fa-angle-left"></i>4</span></a><i class="fa fa-angle-right"></i></li>
+			<li><a href="/categories/Hexo博客/">Hexo博客<span> <i class="fa fa-angle-left"></i>5</span></a><i class="fa fa-angle-right"></i></li>
 		
-			<li><a href="/categories/工具/">工具<span> <i class="fa fa-angle-left"></i>4</span></a><i class="fa fa-angle-right"></i></li>
+			<li><a href="/categories/电脑技术/">电脑技术<span> <i class="fa fa-angle-left"></i>6</span></a><i class="fa fa-angle-right"></i></li>
 		
-			<li><a href="/categories/技术/">技术<span> <i class="fa fa-angle-left"></i>7</span></a><i class="fa fa-angle-right"></i></li>
-		
-			<li><a href="/categories/火狐/">火狐<span> <i class="fa fa-angle-left"></i>1</span></a><i class="fa fa-angle-right"></i></li>
+			<li><a href="/categories/软件工具/">软件工具<span> <i class="fa fa-angle-left"></i>4</span></a><i class="fa fa-angle-right"></i></li>
 		
 		</ul>
 	</div>
@@ -332,25 +393,25 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/Hexo/">Hexo<span>4</span></a></li>
+		
 			<li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
-		
-			<li><a href="/tags/stylish/">stylish<span>1</span></a></li>
-		
-			<li><a href="/tags/github/">github<span>3</span></a></li>
-		
-			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
-		
-			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
 		
 			<li><a href="/tags/emeditor/">emeditor<span>1</span></a></li>
 		
-			<li><a href="/tags/Markdown/">Markdown<span>5</span></a></li>
+			<li><a href="/tags/github/">github<span>3</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>3</span></a></li>
+			<li><a href="/tags/Markdown/">Markdown<span>3</span></a></li>
 		
 			<li><a href="/tags/Photoshop/">Photoshop<span>1</span></a></li>
 		
-			<li><a href="/tags/txt/">txt<span>2</span></a></li>
+			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
+		
+			<li><a href="/tags/stylish/">stylish<span>1</span></a></li>
+		
+			<li><a href="/tags/txt/">txt<span>1</span></a></li>
+		
+			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -364,23 +425,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2014/12/07/zyhw08/" ><i class="fa fa-file-o"></i>Github push时重复输入用户名密码的问题</a>
+        <a href="/2014/12/11/hexo-freemind-tag-plugins/"  title="freemind主题的tag和plugins用法." ><i class="fa fa-file-o"></i>Hexo博客Freemind主题一些规则</a>
       </li>
     
       <li>
-        <a href="/2014/12/06/zyhw07/" ><i class="fa fa-file-o"></i>EPUB内嵌入DIY字体</a>
+        <a href="/2014/12/07/zyhw08/"  title="此方法可以完美解决两个github账号push问题." ><i class="fa fa-file-o"></i>Github push时重复输入用户名密码的问题</a>
       </li>
     
       <li>
-        <a href="/2014/12/05/zyhw06/" ><i class="fa fa-file-o"></i>emeditor利用书签提取小说标题</a>
+        <a href="/2014/12/06/zyhw07/"  title="EPUB内嵌字体有点麻烦." ><i class="fa fa-file-o"></i>EPUB内嵌入DIY字体</a>
+      </li>
+    
+      <li>
+        <a href="/2014/12/05/zyhw06/"  title="可以在制作电子书时先提取出来看看标题有错没." ><i class="fa fa-file-o"></i>emeditor利用书签提取小说标题</a>
       </li>
     
       <li>
         <a href="/2014/11/28/zyhw05/" ><i class="fa fa-file-o"></i>pureftpd安装-Error</a>
-      </li>
-    
-      <li>
-        <a href="/2014/11/28/zyhw04/" ><i class="fa fa-file-o"></i>火狐stylish搜索样式之百度</a>
       </li>
     
   </ul>

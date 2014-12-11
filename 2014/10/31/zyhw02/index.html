@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>github新建Repositories后具体操作步骤 | Zyhw&#39;Blog</title>
+  <title>github新建Repositories后具体操作步骤 | Zyhw&#39;s Blog</title>
   <meta name="author" content="Zyhw">
   
-  <meta name="description" content="rouhezi.com">
+  <meta name="description" content="学习github的操作方法中.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="github新建Repositories后具体操作步骤"/>
-  <meta property="og:site_name" content="Zyhw&#39;Blog"/>
+  <meta property="og:site_name" content="Zyhw&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   
-    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Zyhw&#39;s Blog" type="application/atom+xml">
   
   
-    <link href="/favicon.png" rel="icon">
+    <link href="/favicon.ico" rel="icon">
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="/">Zyhw&#39;Blog</a>
+	  <a class="navbar-brand" href="/">Zyhw&#39;s Blog</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -101,6 +101,11 @@
 	<div class="col-md-9">
 	
 
+	
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>学习github的操作方法中.</p>
+			
+		</div> <!-- alert -->
 			
 
 	<!-- content -->
@@ -112,7 +117,7 @@
 <h2 id="生成SSH密钥并添加到github">生成SSH密钥并添加到github</h2>
 <p>查看是否已经有了ssh密钥：<code>cd ~/.ssh</code>。如果没有密钥则不会有此文件夹，有则备份删除。</p>
 <p><code>ssh-keygen -t rsa -C “你的注册邮箱”</code></p>
-<p>按3个回车，密码为空。最后得到了两个文件：id_rsa和id_rsa.pub，添加id_rsa.pub中的所有到github中的SSH Keys中。</p>
+<p>按3个回车，密码为空。最后得到了两个文件：id_rsa和id_rsa.pub，添加id_rsa.pub中的所有到github中的SSH Keys中。<br><a id="more"></a></p>
 <h2 id="新建工作目录，并初始化本地新仓库">新建工作目录，并初始化本地新仓库</h2>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line"><span class="keyword">echo</span> <span class="string">"# This is my README"</span> &gt;&gt; README.md    //建立README.md文件并且内容是# This <span class="keyword">is</span> my README</div><div class="line">git <span class="built_in">add</span> .  //把所有文件加入到索引（不想把所有文件加入，可以用gitignore或<span class="built_in">add</span> 具体文件)</div><div class="line">git commit -<span class="keyword">m</span> <span class="string">"First Commit. Adding a README."</span>  //提交到本地仓库，然后会填写更新日志( -<span class="keyword">m</span> “更新日志”也可)</div></pre></td></tr></table></figure>
 
@@ -223,7 +228,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/博客/">博客<span>4</span></a></li>
+    <li><a href="/categories/Hexo博客/">Hexo博客<span>5</span></a></li>
   </li>
 
     </ul>
@@ -243,6 +248,11 @@
 
 	<!-- toc -->
 	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#添加用户信息"><span class="toc-article-text">添加用户信息</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#生成SSH密钥并添加到github"><span class="toc-article-text">生成SSH密钥并添加到github</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#新建工作目录，并初始化本地新仓库"><span class="toc-article-text">新建工作目录，并初始化本地新仓库</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#添加远程仓库并推送数据到远程仓库"><span class="toc-article-text">添加远程仓库并推送数据到远程仓库</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#之后就是重复上述操作（排除init和romote的操作）"><span class="toc-article-text">之后就是重复上述操作（排除init和romote的操作）</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#其他常用命令"><span class="toc-article-text">其他常用命令</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#常见错误"><span class="toc-article-text">常见错误</span></a></li></ol>
+		</div>
 	
 	</div>
 	
