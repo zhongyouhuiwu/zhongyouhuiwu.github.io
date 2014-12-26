@@ -4,7 +4,7 @@
   <subtitle><![CDATA[肉合子-rouhezi.com]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://rouhezi.com/"/>
-  <updated>2014-12-11T08:43:27.467Z</updated>
+  <updated>2014-12-26T14:17:32.158Z</updated>
   <id>http://rouhezi.com/</id>
   
   <author>
@@ -15,11 +15,74 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Rime输入法一些设定]]></title>
+    <link href="http://rouhezi.com/2014/12/26/rime-set/"/>
+    <id>http://rouhezi.com/2014/12/26/rime-set/</id>
+    <published>2014-12-26T14:08:08.000Z</published>
+    <updated>2014-12-26T14:17:11.000Z</updated>
+    <content type="html"><![CDATA[<p>有鉴于谷歌搜狗拼音等不太好用，但是博主一直页没找到合心的输入法，直到遇见Rime，中州韵就是我想要的输入法。记录一下自己用的时候的修改，以备查询。注意：缩进不要弄丢，所有更改完都需要重新部署才能生效。</p>
+<h3 id="一、输入方案切换">一、输入方案切换</h3>
+<p>如简繁，在已启动 RIME条件下，按Ctrl+grave（Tab上面那个键）或者F4进行方案选择</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/04c1a269tw1enneorefehj20gq028glv.jpg" alt="简繁切换"></p>
+<p>如图，直接按数字5即可。</p>
+<h3 id="二、常规设定">二、常规设定</h3>
+<p>在<code>weasel.custom.yaml</code>文中添加如下信息。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">patch:</div><div class="line">  <span class="string">"style/color_scheme"</span>: youtube  <span class="comment"># 输入法皮肤</span></div><div class="line">  <span class="string">"style/font_point"</span>: <span class="number">21</span>         <span class="comment"># 输入法字号</span></div><div class="line">  style/display_tray_icon: <span class="literal">true</span>  <span class="comment"># 显示托盘图标，是右键可以进行设置的那个图标</span></div><div class="line">  style/horizontal: <span class="literal">false</span>        <span class="comment"># 输入法候选词显示（true为横排）</span></div><div class="line">  style/corner_radius: <span class="number">10</span>        <span class="comment"># 窗口圓角半徑</span></div><div class="line">  style/border_height: <span class="number">0</span>         <span class="comment"># 窗口邊界高度，大於圓角半徑才有效果</span></div><div class="line">  style/border_width: <span class="number">0</span>          <span class="comment"># 窗口邊界寬度，大於圓角半徑才有效果</span></div></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="三、输入法皮肤文件详解">三、输入法皮肤文件详解</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">starcraft:</div><div class="line">  author: <span class="string">"Contralisk &lt;contralisk<span class="variable">@gmail</span>.com&gt;, original artwork by Blizzard Entertainment"</span></div><div class="line">  back_color: <span class="number">0x000000</span>                      <span class="comment"># 底色</span></div><div class="line">  border_color: <span class="number">0x1010a0</span>                    <span class="comment"># 边框颜色，与底色相同则为无边框的效果</span></div><div class="line">  candidate_text_color: <span class="number">0x30bb55</span>            <span class="comment"># 候选项文字颜色，当与文字颜色不同时指定</span></div><div class="line">  hilited_back_color: <span class="number">0x000000</span>              <span class="comment"># 设定高亮文字的底色，可起到凸显高亮部份的作用</span></div><div class="line">  hilited_candidate_back_color: <span class="number">0x000000</span></div><div class="line">  hilited_candidate_text_color: <span class="number">0x60ffa8</span></div><div class="line">  hilited_text_color: <span class="number">0xfecb96</span>              <span class="comment"># 高亮文字，即与当前高亮候选对应的那部份输入码</span></div><div class="line">  name: <span class="string">"星際我爭霸／StarCraft"</span></div><div class="line">  text_color: <span class="number">0xccaa88</span>                      <span class="comment"># 编码行文字颜色，24位色值，用十六进制书写方便些，顺序是蓝绿红0xBBGGRR</span></div></pre></td></tr></table></figure>
+
+<p><img src="http://ww4.sinaimg.cn/mw690/04c1a269tw1ennfbyp2cxj20g408i0v3.jpg" alt="Rime配色"></p>
+<h3 id="四、特殊符号symbols的输入">四、特殊符号symbols的输入</h3>
+<p>在<code>luna_pinyin.custom.yaml</code>文件中添加如下代码</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="label">patch:</span></div><div class="line">  <span class="preprocessor"># 用\输入特殊字符symbols</span></div><div class="line">  <span class="string">"punctuator/import_preset"</span>: symbols</div><div class="line">  <span class="string">"recognizer/patterns/punct"</span>: <span class="string">"^/([A-Z|a-z]*|[0-9]|10)$"</span></div></pre></td></tr></table></figure>
+
+<p>即可/xl这样就书输入希腊字母，拼音首字母。</p>
+<h3 id="五、词库备份">五、词库备份</h3>
+<p>RIME个人词库配置同步（针对文件installation.yaml，文件夹sync），摘选自贴吧，没实验。</p>
+<p>RIME本身不可以实现云同步，但我们可以借助第三方云端实现此功能。我本人使用的坚果云网盘，类似的像是百度，115均可。</p>
+<ul>
+<li>第一步打开用户文件夹中的<code>installation.yaml</code>文件，修改<code>sync_dir</code>指向位置（这个位置将是RIME的词典与配置存储的地方），另外也可修改installation_id为自己喜欢的名称（为字母下划线数字，也可以不修改，我的是修改为了lin）</li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/mw690/04c1a269tw1ennfo38jswj20bd06dab0.jpg" alt="Rime词库备份"></p>
+<ul>
+<li>第二部做好上述修改后，点击用户同步。同步完毕后，lin文件夹设置为同步文件夹。右击即可实现设置。</li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/mw690/04c1a269tw1ennfo3n2yjj20ek08kab7.jpg" alt="Rime词库备份"></p>
+<p>以后若在其他电脑上使用RIME可做如下步骤：</p>
+<ul>
+<li>① 安装好RIMR与你的坚果云客户端。</li>
+<li>② 通过坚果云客户端下载好你的个人词库配置文件等（注意位置要与你在installation.yaml中修改的一致）</li>
+<li>③ 修改用户文件夹中installation.yaml文件中的sync_dir指向，使其与坚果云下载好的个人配置等文件位置一致。</li>
+<li>④ 点击“用户资料同步”同步个人词库等。</li>
+</ul>
+<p>关于同步在说明几点：</p>
+<ul>
+<li>⑴ 上述中的第四步同步是将从云端同步至本地的词库同步进你的RIME中，而个人配置没有同步进RIME中。个人配置需要手动将你设置好的几个文件手动拖入进“用户文件夹”，重新部署以实现配置的同步。</li>
+<li>⑵ 词库的同步于RIME讲是一个双向的同步。<br>如你在甲电脑使用RIME积累了词汇ABCDE，而后将ABCDE词汇同步进云端。在乙电脑云端先同步进本地的同步文件夹（也就是sync_dir指向的文件夹）。乙电脑在之前积累了词汇为EFGH，当乙点击“用户资料同步”后，RIME实现的是一个双向的同步：即乙电脑积累的词汇EFGH同步进sync_dir指向的同步文件夹，sync_dir指向的同步文件夹中的ABCDE同步进“用户文件夹”</li>
+<li>⑶ 配置的同步是单向的同步，即由“用户文件夹”指向“同步文件夹”</li>
+<li>⑷ 原因也简单，如果不是这样，当“用户文件夹”与“同步文件夹”中的配置不一致时不知道采用哪个，那就乱了。</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[跨平台流畅高定制输入法.]]>
+    
+    </summary>
+    
+      <category term="Rime" scheme="http://rouhezi.com/tags/Rime/"/>
+    
+      <category term="软件工具" scheme="http://rouhezi.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Git入门教程]]></title>
     <link href="http://rouhezi.com/2014/12/11/git-jiaocheng/"/>
     <id>http://rouhezi.com/2014/12/11/git-jiaocheng/</id>
     <published>2014-12-11T08:34:21.000Z</published>
-    <updated>2014-12-11T08:43:05.000Z</updated>
+    <updated>2014-12-11T08:45:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="创建新仓库：">创建新仓库：</h2>
 <p>用<code>git init</code>在当前目录建立本地新仓库</p>
 <p>用 <code>git clone &lt;url&gt;</code>在当前目录克隆一个远端仓库</p>
@@ -28,9 +91,11 @@
 <ul>
 <li>工作目录</li>
 <li>暂存区域</li>
-<li>本地仓库<br><a id="more"></a><h3 id="工作目录：">工作目录：</h3>
+<li>本地仓库<a id="more"></a>
+
 </li>
 </ul>
+<h3 id="工作目录：">工作目录：</h3>
 <p>文件可能有三种不同状态：</p>
 <ul>
 <li>未被追踪</li>

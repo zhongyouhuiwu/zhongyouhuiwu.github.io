@@ -108,6 +108,45 @@
 	
 	<!-- display as entry -->
 		<h3 class="title">
+			<a href="/2014/12/26/rime-set/" title="跨平台流畅高定制输入法.">Rime输入法一些设定</a>
+			<span class="date"> 12月 26日,2014 </span>
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-8">
+	
+	
+	  <p>有鉴于谷歌搜狗拼音等不太好用，但是博主一直页没找到合心的输入法，直到遇见Rime，中州韵就是我想要的输入法。记录一下自己用的时候的修改，以备查询。注意：缩进不要弄丢，所有更改完都需要重新部署才能生效。</p>
+<h3 id="一、输入方案切换">一、输入方案切换</h3>
+<p>如简繁，在已启动 RIME条件下，按Ctrl+grave（Tab上面那个键）或者F4进行方案选择</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/04c1a269tw1enneorefehj20gq028glv.jpg" alt="简繁切换"></p>
+<p>如图，直接按数字5即可。</p>
+<h3 id="二、常规设定">二、常规设定</h3>
+<p>在<code>weasel.custom.yaml</code>文中添加如下信息。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">patch:</div><div class="line">  <span class="string">"style/color_scheme"</span>: youtube  <span class="comment"># 输入法皮肤</span></div><div class="line">  <span class="string">"style/font_point"</span>: <span class="number">21</span>         <span class="comment"># 输入法字号</span></div><div class="line">  style/display_tray_icon: <span class="literal">true</span>  <span class="comment"># 显示托盘图标，是右键可以进行设置的那个图标</span></div><div class="line">  style/horizontal: <span class="literal">false</span>        <span class="comment"># 输入法候选词显示（true为横排）</span></div><div class="line">  style/corner_radius: <span class="number">10</span>        <span class="comment"># 窗口圓角半徑</span></div><div class="line">  style/border_height: <span class="number">0</span>         <span class="comment"># 窗口邊界高度，大於圓角半徑才有效果</span></div><div class="line">  style/border_width: <span class="number">0</span>          <span class="comment"># 窗口邊界寬度，大於圓角半徑才有效果</span></div></pre></td></tr></table></figure>
+
+
+	
+	</div>
+	
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="/2014/12/26/rime-set/"><img src="http://ww2.sinaimg.cn/mw690/04c1a269tw1enneijckosg208409bwfj.gif" alt="Rime输入法一些设定"  class="nofancybox"></a></div>
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2014/12/26/rime-set/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+		<h3 class="title">
 			<a href="/2014/12/11/git-jiaocheng/" title="记录一下，以备后用.">Git入门教程</a>
 			<span class="date"> 12月 11日,2014 </span>
 		</h3>
@@ -128,7 +167,7 @@
 <ul>
 <li>工作目录</li>
 <li>暂存区域</li>
-<li>本地仓库<br>
+<li>本地仓库
 	
 	</div>
 	
@@ -257,42 +296,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->
-		<h3 class="title">
-			<a href="/2014/12/05/zyhw06/" title="可以在制作电子书时先提取出来看看标题有错没.">emeditor利用书签提取小说标题</a>
-			<span class="date"> 12月 5日,2014 </span>
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-8">
-	
-	
-	  <h2 id="一、首先查找符合条件的字符串。">一、首先查找符合条件的字符串。</h2>
-<ul>
-<li>利用正则<code>第.*[卷章]</code>查找到卷章。</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">第一卷</div><div class="line">第一章 标题</div><div class="line">    我是一个段落</div><div class="line">	</div><div class="line">第二章 标题</div><div class="line">	我是一个段落</div><div class="line">第二卷 标题</div><div class="line">第三章 标题</div><div class="line">	我是一个段落</div><div class="line">第四章 标题</div><div class="line">	我是一个段落</div><div class="line">第五章 标题</div><div class="line">	我是一个段落</div><div class="line">第六章 标题</div><div class="line">	我是一个段落</div></pre></td></tr></table></figure>
-
-<p>
-	
-	</div>
-	
-	<div class="col-md-4">
-	  <div class="thumbnail"><a href="/2014/12/05/zyhw06/"><img src="http://ww4.sinaimg.cn/mw690/04c1a269tw1en5ljawm3sj207m02uglk.jpg" alt="emeditor利用书签提取小说标题"  class="nofancybox"></a></div>
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2014/12/05/zyhw06/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
 
 		</div>
 
@@ -343,7 +346,7 @@
 		
 			<li><a href="/categories/电脑技术/">电脑技术<span> <i class="fa fa-angle-left"></i>6</span></a><i class="fa fa-angle-right"></i></li>
 		
-			<li><a href="/categories/软件工具/">软件工具<span> <i class="fa fa-angle-left"></i>4</span></a><i class="fa fa-angle-right"></i></li>
+			<li><a href="/categories/软件工具/">软件工具<span> <i class="fa fa-angle-left"></i>5</span></a><i class="fa fa-angle-right"></i></li>
 		
 		</ul>
 	</div>
@@ -354,23 +357,25 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Photoshop/">Photoshop<span>1</span></a></li>
+			<li><a href="/tags/emeditor/">emeditor<span>1</span></a></li>
 		
 			<li><a href="/tags/stylish/">stylish<span>1</span></a></li>
 		
-			<li><a href="/tags/emeditor/">emeditor<span>1</span></a></li>
+			<li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
 		
 			<li><a href="/tags/txt/">txt<span>1</span></a></li>
+		
+			<li><a href="/tags/Photoshop/">Photoshop<span>1</span></a></li>
+		
+			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
+		
+			<li><a href="/tags/Rime/">Rime<span>1</span></a></li>
 		
 			<li><a href="/tags/autohotkey/">autohotkey<span>1</span></a></li>
 		
 			<li><a href="/tags/github/">github<span>4</span></a></li>
 		
-			<li><a href="/tags/EPUB/">EPUB<span>1</span></a></li>
-		
 			<li><a href="/tags/Hexo/">Hexo<span>4</span></a></li>
-		
-			<li><a href="/tags/pureftpd/">pureftpd<span>1</span></a></li>
 		
 			<li><a href="/tags/Markdown/">Markdown<span>3</span></a></li>
 		
@@ -386,6 +391,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2014/12/26/rime-set/"  title="跨平台流畅高定制输入法." ><i class="fa fa-file-o"></i>Rime输入法一些设定</a>
+      </li>
+    
+      <li>
         <a href="/2014/12/11/git-jiaocheng/"  title="记录一下，以备后用." ><i class="fa fa-file-o"></i>Git入门教程</a>
       </li>
     
@@ -399,10 +408,6 @@
     
       <li>
         <a href="/2014/12/06/zyhw07/"  title="EPUB内嵌字体有点麻烦." ><i class="fa fa-file-o"></i>EPUB内嵌入DIY字体</a>
-      </li>
-    
-      <li>
-        <a href="/2014/12/05/zyhw06/"  title="可以在制作电子书时先提取出来看看标题有错没." ><i class="fa fa-file-o"></i>emeditor利用书签提取小说标题</a>
       </li>
     
   </ul>
